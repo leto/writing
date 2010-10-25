@@ -1,0 +1,19 @@
+So many amazing things happened at GSoC 2010! I will try to
+jot a few of them down, before they leave for warmer climates.
+
+Parrot on RTEMS hacking with Chris Johns and Ralf from RTEMS.
+Used Centos 5 RPMS on Ubuntu 10.04 with rpm2cpio piped
+to cpio, which was a trick to get around the fact that RTEMS
+does not have debian packages. It worked remarkably well.
+I had a cross-compilation environment setup after a few minutes.
+
+Chromatic, Chris Johns and I sat in a room and talked shop
+about how Parrot and RTEMS can play nicely together. There are
+still some feature voids on the Parrot side to fill:
+
+    - Parrot calls exit() in various places, which reboots RTEMS
+    - i.e. a syntax error reboots the OS -> not fun
+    - Parrot needs a configure step to detect RTEMS, I created
+      TT#1840 for this
+
+I gave an advanced trolling session.
