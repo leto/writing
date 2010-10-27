@@ -1,3 +1,4 @@
+<p>
 So many amazing things happened at the Google Summer of Code Mentor summit
 2010! I will try to jot a few of them down, before they leave for warmer
 climates. For those that just want to read all the session notes, you can
@@ -5,7 +6,9 @@ find them <a href="http://gsoc-wiki.osuosl.org/index.php/Session_Notes_2010">her
 Also, if you haven't yet read about how The Perl Foundation and Parrot Foundation
 fared this summer, you can read about it on the 
 <a href="http://google-opensource.blogspot.com/2010/10/perl-and-parrot-spread-open-source-love.html">Google Open Source Blog</a>.
+</p>
 
+<p>
 It began by arriving a bit early to work with <a
 href="http://www.flickr.com/photos/selenamarie/5112086494/in/set-72157625233172162/">some
 awesome people</a> on improving the <a href="http://yfrog.com/m9h61rj">GSoC
@@ -18,7 +21,9 @@ Creative Commons license. They are free for anyone to read online and are
 easily exportable to many formats.  We even <a
 href="http://blog.booki.cc/?p=588">bound 60 copies of the books</a> and handed
 them out to mentors attending the summit.
+</p>
 
+<p>
 <a href="http://parrot.org">Parrot</a> on <a href="http://rtems.com">RTEMS</a>
 hacking with Chris Johns and Ralf from RTEMS.  We used Centos 5 RPMS on Ubuntu
 10.04 with rpm2cpio piped to cpio, which was a trick to get around the fact
@@ -26,25 +31,29 @@ that RTEMS does not have debian packages. It worked remarkably well.  I had a
 cross-compilation environment setup after a few minutes. I think they will be
 adding these intructions to their wiki. Now that I have the RTEMS toolchain on
 my netbook, I will be much more productive with regard to Parrot on RTEMS.
+</p>
 
+<p>
 Chromatic, Chris Johns and I sat in a room and talked shop about how Parrot and
 RTEMS can play nicely together. There are still some feature voids on the
-Parrot side to fill:
-
-Parrot calls exit() in various places, which reboots RTEMS
-    i.e. a syntax error reboots the OS -> not fun
-Parrot needs a C probe o detect RTEMS, which already has a ticket
+Parrot side to fill: Parrot calls exit() in various places, which reboots RTEMS
+    i.e. a syntax error reboots the OS. Not Fun. Parrot also needs a C probe to detect RTEMS, which already has a 
+   ticket in our bug tracker.
 A real-time garbage collector will be needed for long-running processes,
 but for short-lived applications, disabling the GC with the -G command
 line argument to Parrot will work.
+</p>
 
+<p>
 I gave a session with <a href="http://www.chesnok.com/daily/">Selena Deckelmann</a> 
 and <a href="http://bart-massey.com/">Bart Massey</a> introducing <a
 href="http://twitter.com/trolluni">Troll University</a>, which aims to educate
 organizations, corporations and open source communities about what motivations
 and principles trolls use and how to protect against them. We are working
 on some Trollcasts, so stay tuned!
+</p>
 
+<p>
 I also gave a session called <a
 href="http://openetherpad.org/dynlanginterop">Dynamic Language
 Interoperability</a>, which has been held for the last few years, to my
@@ -52,15 +61,20 @@ knowledge. The consensus seemed to be that every dynamic language has the same
 interop problems, and Parrot VM seems to be the only project working hard to
 solve these complex issues in a general manner. This gives me a lot of hope
 that people will soon realize that Parrot is full of WIN.
+</p>
 
+<p>
 It also <a href="http://twitter.com/#!/dukeleto/status/28729519750">came to my attention during the conference</a> that 
 <a href="http://github.com">Github</a> hired the student
 that mentored under them this year to work on <a href="http://libgit2.github.com/">libgit2</a>. This is one example
 of the amazing opportunities that students have after completing a Google Summer of Code. The sky really is the limit.
 And just in case you think this is an isolated incident, <a href="http://bergie.iki.fi/blog/summer_of_code_works/">it isn't</a>.
+</p>
 
+<p>
 As if writing some books and going the Mentor Summit wasn't enough to totally
 drain me, I am currently attending the last day of the GIT Together 2010, which
 is the yearly Git developer and user meetup/unconferencey thing. I have learned
 so much that I can't even begin to describe it, but if you want to look at
 session notes, you can find them <a href="https://git.wiki.kernel.org/index.php/GitTogether10">here</a>.
+</p>
