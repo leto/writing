@@ -1,9 +1,10 @@
 <p>
-So many amazing things happened at the Google Summer of Code Mentor summit
+So many amazing things happened at the <a href="http://code.google.com/soc">Google Summer of Code</a> Mentor summit
 2010! I will try to jot a few of them down, before they leave for warmer
 climates. For those that just want to read all the session notes, you can
 find them <a href="http://gsoc-wiki.osuosl.org/index.php/Session_Notes_2010">here.</a>
-Also, if you haven't yet read about how The Perl Foundation and Parrot Foundation
+Also, if you haven't yet read about how <a href="http://perlfoundation.org">The Perl Foundation</a> and 
+<a href="http://parrot.org">Parrot Foundation</a>
 fared this summer, you can read about it on the 
 <a href="http://google-opensource.blogspot.com/2010/10/perl-and-parrot-spread-open-source-love.html">Google Open Source Blog</a>.
 </p>
@@ -18,7 +19,9 @@ sprint" was facilitated by Adam Hyde of <a
 href="http://flossmanuals.net">FLOSSManuals</a>, and they were written with a
 completely open source software stack, as well as being released under a
 Creative Commons license. They are free for anyone to read online and are
-easily exportable to many formats.  We even <a
+easily exportable to many formats. Read the 
+<a href="http://www.booki.cc/gsocstudentguide/">Student Manual</a> or the
+<a href="http://www.booki.cc/gsoc-mentoring/">Mentor+Org Admin Manual</a> online now!  We even <a
 href="http://blog.booki.cc/?p=588">bound 60 copies of the books</a> and handed
 them out to mentors attending the summit.
 </p>
@@ -45,7 +48,8 @@ line argument to Parrot will work.
 </p>
 
 <p>
-I gave a session with <a href="http://www.chesnok.com/daily/">Selena Deckelmann</a> 
+I gave <a href="http://twitpic.com/30j8k5">a</a>
+<a href="http://twitgoo.com/1pytme">session</a> with <a href="http://www.chesnok.com/daily/">Selena Deckelmann</a> 
 and <a href="http://bart-massey.com/">Bart Massey</a> introducing <a
 href="http://twitter.com/trolluni">Troll University</a>, which aims to educate
 organizations, corporations and open source communities about what motivations
