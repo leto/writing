@@ -1,9 +1,12 @@
+<p>
 I have slowly but surely been increasing test coverage of src/extend_vtable.c, which
 when I started my grant was at 5% and is now sitting at 43%. I estimated that it would
 take about two weeks to get it to 50% and then another two weeks to get to 95%, but
 this was a bit optimistic. When I look back, giving myself a month for each would
 have been appropriate.
+</p>
 
+<p>
 I do believe that my development velocity has increased recently, because I wrote
 a convenience funciton called extend_vtable_output_is(), which greatly reduces
 the number of lines of code that each extend_vtable test requires. The function
@@ -11,26 +14,44 @@ is basically a wrapper around already existing functions that automates the proc
 of compiling C source code use the Parrot C API, but it removes the need for roughly
 40 lines of boilerplate stuff, such as including the proper header files, defining
 convenience functions that do basic error checking and data structure creation.
+</p>
 
+<p>
 The whole reason this subsystem is undertested is because no function like
 extend_vtable_output_is() existed.  Now each of my extend_vtable tests is
 around 10 lines, instead of 50. I've only had the new function for about
 half the time of the grant, so tests are now getting written much faster.
+</p>
 
+<p>
 I have added about 700 lines of lines of tests since this grant started (using
 the spiffy new extend_vtable_output_is() function), and that has caused a 38%
 increase in test coverage. With the power of mathematics, we can figure out
 that (.38)*N = 700, which means N = 700/.38 = ~1842, where N is the number of
 lines of tests needed to cover 100% of the file (roughly).
+</p>
 
+<p>
 My new estimate for getting to 95% coverage of extend_vtable is one month
 from now, Feb 24th, and then another two months for the rest of the grant.
+</p>
 
-The reason I say two months is that I am actually trying to hit a moving target,
+<p>
+The reason I say two months is that I am actually trying to hit a
+<a href="http://tapir2.ro.vutbr.cz/cover/latest-c_cover/">moving target</a>,
 and the code coverage of extend.c and embed.c have actually *gone down* since
 I started the grant. Currently extend.c is about 6% lower and embed.c is about 14%
 lower. This means my grant is actually getting harder to complete.
+</p>
 
+<p> I also learned about a very useful yet undocument environment variable
+called POSTMORTEM which makes Parrot test functions leave various intermediate
+files around for debugging purposes if it is set to true, which greatly helps
+in developing these tests. I plan to add documentation about this to the Parrot
+developer documentation.  </p>
+
+<p>
 Given the new test function and the new coverage numbers, I estimate that I will
 be able to complete this grant by late April 2011.
+</p>
 
