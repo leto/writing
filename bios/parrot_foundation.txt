@@ -1,0 +1,12 @@
+
+Jonathan "Duke" Leto has a Masters degree in Mathematics from the University of
+Central Florida and has several published papers in peer-reviewed journals in 
+the fields of mathematics, engineering and bioinformatics.
+
+Jonathan has been involved with Parrot since 1.0, and has been Organization
+Administrator for Parrot Foundation in Google Summer of Code 2009-2010 and
+Google Code-In 2010. He was elected as Secretary on the Board of Directors in
+August 2010 and took the role of Community Manager in October 2010.
+
+He currently works as a Bioinformatics Analyst at Boyce Thompson Institute for
+Plant Research at Cornell University and enjoys discovering wheels within wheels.
