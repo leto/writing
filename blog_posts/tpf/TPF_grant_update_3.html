@@ -1,37 +1,65 @@
+<p>
 The quest to improve test coverage for src/extend_vtable.c has continued. Some dragons
 were slayed, a few trolls were paid tolls to cross creaky bridges of abstraction and
-many siren calls to hack on other code were dutifully ignored.
+many siren calls to hack on other code were dutifully ignored (mostly).
 
+</p>
+<p>
 This TPF grant has forced me to become very familiar with Parrot vtables (virtual tables),
-which is basically an API for talking to Parrot PMCs (really just objects with a funny
+which is basically an API for talking to Parrot <a href="https://github.com/parrot/parrot/blob/master/docs/pdds/pdd17_pmc.pod">PMCs</a> 
+(really just objects with a funny
 name). PMC can stand for Parrot Magic Cookie or PolyMorphic Container. Take your pick.
 
+</p>
+<p>
 Firstly, vtable is already slang for "vtable function", which expands to "virtual table function."
 What the junk is a "virtual table function" ? I find that the simplest way to think about
 it is that every PMC has <i>slots</i> or <i>buckets</i> with standardized names such as
 <b>get_bool</b> (get Boolean value) or <b>length</b> (what is the length of this PMC?). 
 
+</p>
+<p>
 All PMCs inherit sensible defaults for most vtables, but they are allowed to
 override them. Why would you want to override them? As a simple example, if we
-had a complex number PMC that was really just an FixedNumberArray of two
+had a complex number PMC that was really just an <a href="https://github.com/parrot/parrot/blob/master/src/pmc/fixedfloatarray.pmc">FixedFloatArray PMC</a> 
+of two
 numbers underneath, the <b>length</b> would always return 2 for every complex
 number. Not very useful.
 
+</p>
+<p>
 A much more useful <b>length</b> vtable would use the coefficients <b>a</b> and
 <b>b</b> from <b>a + b*i</b> and compute the Euclidean distance (length from
 the origin) <b>sqrt(a^2 + b^2)</b>). Hopefully you now have a taste for what
 what vtables are about. Parrot PMCs have over 100 vtables that can be
 overridden to provide custom functionality.
 
+</p>
+<p>
 I recently ran across the <b>hashvalue</b> vtable and couldn't find any tests
 for it in Parrot core (outside of the test that I had written for it in
-extend_vtable.t) or any use of it in Rakudo Perl 6. Oh noes! It seemed like an
-unused feature, so I created a Trac Ticket to mark it as deprecated so it could
+extend_vtable.t) or any use of it in <a href="http://rakudo.org">Rakudo Perl 6</a>. Oh noes! It seemed like an
+unused/untested feature, so I created a <a href="http://trac.parrot.org/parrot/ticket/2027">Trac Ticket</a> to mark it as deprecated so it could
 be removed in a future release.
 
-The discussion about the ticket was fierce. NotFound++ explained why the vtable
-was important and the mighty coding robot known as bacek++ manifested tests quickly.
+</p>
+<p>
+The discussion about the ticket was fierce. <a href="https://github.com/NotFound">NotFound++</a> explained why the vtable
+was important and the mighty coding robot known as <a href="https://github.com/bacek">bacek++</a> manifested tests quickly.
+</p>
 
+<p>
 Yet another case of this grant work having a positive impact on the Parrot codebase,
-even outside the embed/extend interface.
-
+even outside the embed/extend interface. I also <a href="https://github.com/parrot/parrot/commit/612ec787dc975c4d570fb9b95d5f9fbd2993e92a">improved an error message in the PMCProxy PMC</a>,
+which arises when something goes bad during a partial re-compile. Yay for improved debuggability!
+</p>
+<p>
+According to the current <a href="http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend_vtable-c.html">code coverage statistics</a>,
+extend_vtable.c is up to 54% coverage from 43%,
+which is not quite where I predicted from my last update. No doubt this has something to
+do with me packing and preparing to move to a new house this month. My velocity didn't
+decrease so much as the amount of time that I had to work on this grant.
+</p>
+<p>
+I am greatly enjoying working on this grant and even if it is going a bit slower than I had planned, I am very confident that it will be completed in the next few months and hopefully sooner.
+</p>
