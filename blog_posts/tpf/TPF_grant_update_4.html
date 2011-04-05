@@ -1,0 +1,24 @@
+This wayward son is still on his treacherous journey to increase 
+<a href="https://github.com/parrot/parrot/blob/master/t/src/extend_vtable.t">test coverage in
+src/extend_vtable.c</a>. When we last left off our traveler, he explained what the mythical
+VTABLE beast looked like, and we shall continue with the study of this chimerical
+fauna.
+
+According to the latest code coverage statistics, we are now at <a href="http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend_vtable-c.html">64% code coverage</a>, which is an increase of about 10% since my last report.
+
+Most of this grant work concentrated on vtables that required 
+<a href="http://docs.parrot.org/parrot/devel/html/src/pmc/key.pmc.html">Key PMCs</a>. A Key PMC is
+an object that can be used to look something up in a <a href="http://docs.parrot.org/parrot/devel/html/src/pmc/hash.pmc.html">Hash PMC</a> or other aggregated object
+that supports "keyed access". It is very much similar to a "hash key" that can be used
+to look up the appropriate value.
+
+One of the lessons that I have learned in working on these tests is that it is very
+easy to write tests that pass on gcc, but which <a href="http://trac.parrot.org/parrot/ticket/2084">absolutely explode with g++</a>. This
+has to do with gcc not being as strict when some questionable type casting is done.
+I have learned my lesson and I promise not to break the test suite anymore. I will
+use g++ in my testing from now one, promise!
+
+My productivity was definitely hampered by moving to a new house and having a two week
+business trip in the last month, but my new home office is finally set up, so I expect
+productivity to approach previous levels of adding a few dozen tests per week.
+
