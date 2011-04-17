@@ -42,3 +42,23 @@ times in the Perl and Parrot communities, where you can often find me.
 Tests allow you to change things quickly and know if something is broken. They
 are like jetpacks for devevlopers.
 
+Carpenters have a bit of sage wisdom that goes like this:
+
+    Measure twice, cut once.
+
+Coding is like cutting and tests are like measuring.
+
+Test Driven Enlightenment saves an enormous amount of time, because instead of
+flailing around, fiddling with code, not having a direction, tests hone your
+focus.
+
+Tests also are very good positive feedback. Every time you make a new test
+pass, you know that your code is better.
+
+It is easy to think "I want to add 50 features" and spend all day fiddling with
+code, constantly switching between working on different things. Most of the
+time, very little will be accomplished.
+
+But if you have a single failing test, you are a mission to make it pass. It
+focuses your brain on something very specific, which very often has better results
+than switching between tasks constantly.
