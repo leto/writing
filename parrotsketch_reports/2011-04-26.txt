@@ -1,0 +1,12 @@
+What I did:
+    * GSoCy things. Congrats to all our students!
+    * Reported some failures on plobsing++'s branch
+    * Worked on my TPF grant for the embed/extend system. Currenlty have
+    test coverage over 70%.
+    * Started a new branch to port PL/Parrot to the new embed API: https://github.com/leto/plparrot/tree/new_api
+    * Started writing a META.json fil for PL/Parrot so it can be distributed on pgxn.org
+What I will do:
+    * More of the above stuff.
+Blockers:
+    * Time seems to be finite.
+.EOR
