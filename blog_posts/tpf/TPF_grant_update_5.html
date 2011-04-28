@@ -1,0 +1,30 @@
+<p>
+I am still on the path of increasing
+<a href="https://github.com/parrot/parrot/blob/master/t/src/extend_vtable.t">test coverage in
+src/extend_vtable.c</a>. It is much like a zen study, where you methodically concentrate on
+many tiny little pebbles, one at a time, moving them in the sand, to just the right place.
+According to the latest code coverage statistics, we are now at <a href="http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend_vtable-c.html">72% code coverage</a>, which is an increase of about 8% since my last report.
+</p>
+
+
+<p>
+Many, many more tests involving
+<a href="http://docs.parrot.org/parrot/devel/html/src/pmc/key.pmc.html">Key PMCs</a> were added. For an intro to what
+they are, take a look at my <a href="http://leto.net/dukeleto.pl/2011/04/parrot-embed-grant-update-4-the-journey-continues.html">previous grant update</a>. Many of the tests are clusters of related tests,
+because most VTABLEs have many similar forms which take integer, string or PMC-flavored keys. I ran into some platform-specific
+bugs which only manifest on Darwin machines, which were reported by <a href="http://trac.parrot.org/parrot/ticket/2098">Jim Keenan in TT# 2098</a>
+and which I then fixed by querying with a non-empty Key, which is more prudent.
+</p>
+
+<p>
+I also ran into some actual bugs which I reported as Trac Tickets. First is that the cmp_pmc VTABLE does
+not seem to be working correctly from extend_vtable, which was reported in <a href="http://trac.parrot.org/parrot/ticket/2103">TT #2103</a>.
+Then I fell into a "hole" in the VTABLE API, where ResizablePMCArray does not respond to defined_keyed(), which it should. This is described
+in <a href="http://trac.parrot.org/parrot/ticket/2094">TT #2094</a>.
+</p>
+
+<p>
+In retrospect, this was one of the most productive periods of my grant work. I estimate that I will be very close to the 95% milestone by my next grant
+update at this pace, which is very exciting.
+</p>
+
