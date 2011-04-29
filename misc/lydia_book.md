@@ -2,28 +2,32 @@
 
 When I first got involved in free and open source software, I had no clue what
 tests were or why they were important. I had worked on some personal
-programming projects before, but the first time I was actually working on a
+programming projects before, but the first time I actually worked on a
 project with others, i.e. got a commit bit, was Yacas, a computer algebra
-system similar to Mathematica.
+system similar to Mathematica (Yet Another Computer Algebra System).
 
 At this stage in my journey, tests were an afterthought. My general
 meta-algorithm was to hack on code -> "see if it works" -> write a simple test
 to show it works (optional).  If a test was challenging to write, it most
 likely never got written.
 
-This is the first step in the path to Test Driven Enlightment.
+This is the first step in the path to Test Driven Enlightment. You know tests
+are probably a good idea, but one hasn't seen the benefit of them clearly, so
+they are only written occasionally.
 
 If I could open up a wormhole and tell my younger self one peice of wisdom
 about testing, it would be:
 
-    Tests are the proof that your code *actually* works, and they guide you to writing correct
-    code as well as providing the flexibility to change code and know that features still work.
 
     Some tests, in the long-run, are more important than the code they test.
 
 A few people right about now may be thinking that I put on my tinfoil testing
 hat when I sit down to code. How can tests be *more* important than the code
-they test?
+they test?  Tests are the proof that your code *actually* works, and they guide
+you to writing correct code as well as providing the flexibility to change code
+and know that features still work. The larger your codebase becomes, the more
+valuable your tests are, because they allow you to change one part of your code
+and still be sure that the rest of it works.
 
 Code either changes and evolves or bitrots. (Footnote: The term "bitrot" is
 coder slang for the almost universal fact that if a piece of code doesn't
@@ -33,7 +37,7 @@ software and hardware.)
 
 Very often, you will write tests once, but then totally refactor your
 implementation or even rewrite it from scratch. Tests often outlive the code
-they originally tested, i.e.  once set of tests can be used no matter how many
+they originally tested, i.e.  one set of tests can be used no matter how many
 times your code is refactored. They are actually the litmus test that allows
 you to throw away an old implementation and say "this newer implementation has
 a much better design and passes our test suite." I have seen this happen many
@@ -53,20 +57,40 @@ flailing around, fiddling with code, not having a direction, tests hone your
 focus.
 
 Tests also are very good positive feedback. Every time you make a new test
-pass, you know that your code is better.
+pass, you know that your code is better and it has one more feature or one
+less bug.
 
 It is easy to think "I want to add 50 features" and spend all day fiddling with
 code, constantly switching between working on different things. Most of the
-time, very little will be accomplished.
+time, very little will be accomplished. Test Driven Enlightment guides one
+to focus on making one test pass at a time.
 
-But if you have a single failing test, you are a mission to make it pass. It
+If you have a single failing test, you are a mission to make it pass. It
 focuses your brain on something very specific, which very often has better
 results than switching between tasks constantly.
 
 Most information about being test-driven is very specific to a language or
-situation, but that doesn't need to be the case. Here are some general
-test-driven guidelines that will serve you well and apply in almost any
-situation:
+situation, but that doesn't need to be the case.  Here is the how to approach
+adding a new feature or fixing a bug in any language:
+
+    1) Write a test that fails, which you think will pass when the feature
+    is implemented or bug is fixed. 
+    
+    Advanced: As you write the test, run it occasionally, even if it is not
+    done yet, and guess the actual error message that the test will give. The
+    more tests you write and run, the easier this will become.)
+
+    2) Hack on the code.
+
+    3) Run the test. If it passes, go to #4, otherwise go to #2.
+
+    4) You are done! Do a happy dance :)
+
+This method works for any kind of test and any language. If there is only
+one thing about testing that you remember from this essay, let it be the steps above.
+
+Here are some more general test-driven guidelines that will serve you well and apply
+in almost any situation:
 
 1) Understand the difference between what is being tested and what is being
 used as a tool to test something else.
