@@ -18,7 +18,6 @@ they are only written occasionally.
 If I could open up a wormhole and tell my younger self one peice of wisdom
 about testing, it would be:
 
-
     Some tests, in the long-run, are more important than the code they test.
 
 A few people right about now may be thinking that I put on my tinfoil testing
@@ -28,6 +27,12 @@ you to writing correct code as well as providing the flexibility to change code
 and know that features still work. The larger your codebase becomes, the more
 valuable your tests are, because they allow you to change one part of your code
 and still be sure that the rest of it works.
+
+Another vital reason to write tests is because it indicates that something is
+explicitly desirable, rather than an unintended side-effect or oversight.  If
+you have a specification, you can use tests to verify that you meet it, which
+is very valuable, and in some industries, necessary. A test is just like
+"telling a story", where the story is how you think code should work.
 
 Code either changes and evolves or bitrots. (Footnote: The term "bitrot" is
 coder slang for the almost universal fact that if a piece of code doesn't
