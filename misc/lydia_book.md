@@ -113,23 +113,39 @@ changing, you are doing something wrong.
 
 ## Kinds of tests
 
-Spectrum from Unit tests to Integration tests
+Many people start to get confused when people speak of "integration tests",
+"unit tests", "acceptance tests" and many other flavors of tests. One shouldn't
+worry too much about these terms. The more tests you write, the more nuances
+you will see and the differences between tests will become more apparent. Every
+one does not have the same definition for what these tests are, but the terms
+are still useful to describe kinds of tests.
 
-The defintion of each change as you change the definition of unit.
+## Unit Tests vs. Integration Tests
 
-Unit tests work on one "unit" of code.
+Unit tests and integration tests form a spectrum. Unit tests test small bits of
+code, and integration tests verify how more than one "unit" fit together.  The
+test writer gets to decide what comprises a "unit" is, but most often it is at
+the level of a "function" or "method", although some languages call those
+things by different names.
 
-Integration tests work on multiple units of code.
+To make this a little more concrete, we will give a basic analogy using functions.
+Imagine that f(x) and g(x) are two functions which represent two "units" of code.
+For concreteness, let's assume they represent two specific functions in your
+favorite Free/Open Source projects' codebase.
 
-Unit test asserts that when f(x) is given a, it produces b, i.e f(a) = b.
-
-An integration test asserts something similar to, f(g(a)) = b. An integration
-test is testing how multiple things "integrate" or work together, instead of
-how a single part works individually.
+An integration test asserts something like function composition, i.e. f(g(a)) =
+b. An integration test is testing how multiple things "integrate" or work
+together, instead of how a single part works individually. If algebra isn't
+your thang, another way to look at it is unit tests only test one part of the
+machine at a time, but integration tests very many parts work in unison. A
+great example of an integration test is "test driving" a car. You aren't
+checking the air pressure, or measuring voltage of the spark plugs. You are
+making sure the vehicle works as a whole.
 
 Most of the time it is good to have both. I often start with unit tests and add
 integration tests as needed, since you will weed out the most basic bugs first,
 then find more subtle bugs that are related to how peices don't quite fit
-together, as opposed to the individual peices not working. Many people write
+together, as opposed to the individual pieces not working. Many people write
 integration tests first and then delve into unit tests. Which you write first
-isn't nearly as important as writing some of both.
+isn't nearly as important as writing both kinds.
+
