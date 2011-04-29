@@ -11,11 +11,11 @@ meta-algorithm was to hack on code -> "see if it works" -> write a simple test
 to show it works (optional).  If a test was challenging to write, it most
 likely never got written.
 
-This is the first step in the path to Test Driven Enlightment. You know tests
+This is the first step in the path to Test Driven Enlightenment. You know tests
 are probably a good idea, but one hasn't seen the benefit of them clearly, so
 they are only written occasionally.
 
-If I could open up a wormhole and tell my younger self one peice of wisdom
+If I could open up a wormhole and tell my younger self one piece of wisdom
 about testing, it would be:
 
     Some tests, in the long-run, are more important than the code they test.
@@ -37,7 +37,7 @@ is very valuable, and in some industries, necessary. A test is just like
 Code either changes and evolves or bitrots. (Footnote: The term "bitrot" is
 coder slang for the almost universal fact that if a piece of code doesn't
 change but everything it relies on *does*, it "rots" and usually has very
-little chance of working without modifications being made to accomodate newer
+little chance of working without modifications being made to accommodate newer
 software and hardware.)
 
 Very often, you will write tests once, but then totally refactor your
@@ -49,7 +49,7 @@ a much better design and passes our test suite." I have seen this happen many
 times in the Perl and Parrot communities, where you can often find me.
 
 Tests allow you to change things quickly and know if something is broken. They
-are like jetpacks for devevlopers.
+are like jet packs for developers.
 
 Carpenters have a bit of sage wisdom that goes like this:
 
@@ -67,7 +67,7 @@ less bug.
 
 It is easy to think "I want to add 50 features" and spend all day fiddling with
 code, constantly switching between working on different things. Most of the
-time, very little will be accomplished. Test Driven Enlightment guides one
+time, very little will be accomplished. Test Driven Enlightenment guides one
 to focus on making one test pass at a time.
 
 If you have a single failing test, you are a mission to make it pass. It
@@ -144,7 +144,7 @@ making sure the vehicle works as a whole.
 
 Most of the time it is good to have both. I often start with unit tests and add
 integration tests as needed, since you will weed out the most basic bugs first,
-then find more subtle bugs that are related to how peices don't quite fit
+then find more subtle bugs that are related to how pieces don't quite fit
 together, as opposed to the individual pieces not working. Many people write
 integration tests first and then delve into unit tests. Which you write first
 isn't nearly as important as writing both kinds.
