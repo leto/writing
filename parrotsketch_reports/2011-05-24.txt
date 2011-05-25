@@ -1,0 +1,13 @@
+What I did:
+    * Hacked on parrot embed tests some more
+    * Talked with some GSoC students
+    * Got Jitterbug to play nice with Parrot: http://jitterbug.leto.net:3000/
+    * Hacked on M0 assembler. It generates partially correct bytecode now.
+    * Merged some pull requests in Cardinal and Parrot.
+What I will do:
+    * Try to get Rakudo to play nice with Parrot
+    * Figure out all the other things that I am forgetting that I should do.
+    * Book tickets to YAPC::NA
+Blockers:
+    * EFINITETIME
+.EOR
