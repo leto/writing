@@ -49,3 +49,38 @@ allison++ brought up some good questions about how merging bytecode files would 
 done. We hadn't really thought about that, so it lead to some fruitful conversation
 about how PBC is currently merged, what it does wrong, and how M0 can do it less
 wronger.
+
+We then talked about what exactly a "Continuation" in M0 means, and tried to clear
+up some definitions between what is actually meant by Context, State and Continuation.
+
+chromatic++ also mentioned that an optional optimization for the GC would be
+for it to create a memory pool specificically to store Continuations, since
+they will be heavily used and many of them will be short-lived. We are filing
+this under "good to know and we will do that when we get there."
+
+Next we turned to concurrency, including how we would emulate the various concurrency
+models of the languages we want to support, such as Python's GIL. We decided that M0
+will totally ignorant of concurrency concepts, since it is a "magical" concept that
+will be implemented at a higher level. We have started to refer to the level above
+M0 as M1 and everything above M0 as M1+.
+
+Allison also mentioned that their were many innovations and optimizations possible
+in storing isolated register sets for each Continuation (a.k.a call frame). This
+area of Parrot may yield some interesting surprises and perhaps some publishable
+findings.
+
+We all agreed that M0 should be as ignorant about the GC as possible, but the GC
+will most likely learn about M0 as optimizations are implemented. The pluggability
+of our GC's were also talked about. allison++ raised the question "Are pluggable
+GC's easier to maintain/implement if they are only pluggable at compile-time?" Indeed,
+they probably are, but then we run into the issue that our current "make fulltest"
+runs our test suite under differnt GC's, which would require multiple compiles for a
+single test suite. chromatic++ made a suggestion that we could instead make GC's
+pluggable at link-time (which would require a decent about of reorganization) which
+would still allow devs to easily test different GC's without recompiling all of Parrot.
+chromatic++'s estimate is that removing runtime pluggability of GC's would result
+in an across the board speed improvement of 5%.
+
+This conversation then turned toward the fact that M0 bytecode might depend on what
+GC was used when it was generated, because of 
+
