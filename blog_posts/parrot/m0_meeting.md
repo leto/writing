@@ -22,12 +22,16 @@ internals cross between PIR and C, they can't be inlined or optimized as much
 as we would like.
 
 A few years back, Parrot had a JIT compiler, from which many lessoned were
-learned.  I am sure some people were frustrated when we removed it in 1.7.0.
-but sometimes, it is best to start from a clean slate with many more lessons
-learned under your belt. I will venture to say that M0 is the culmination of
-the lessons learned from our failed JIT. I should note that "failure" does not
-have a negative connotation in my mind. Indeed, only through failure are we
-truly learning. If you do something absolutely perfectly, you aren't learning.
+learned.  I am sure some people were frustrated when we removed it in 1.7.0 but
+sometimes, it is best to start from a clean slate with many more lessons
+learned under your belt. Our old JIT only worked on x86 architectures and
+required maintaining a "JIT version" of every op on each architecture
+supported.  Clearly, this method was not going to scale or be maintainable.
+
+I will venture to say that M0 is the culmination of the lessons learned from
+our failed JIT. I should note that "failure" does not have a negative
+connotation in my mind. Indeed, only through failure are we truly learning. If
+you do something absolutely perfectly, you aren't learning.
 
 We are at an exciting time in Parrot's history, in that for a long time, we
 wanted an elegant JIT, using all the latest spiffy techniques, but it was
@@ -67,10 +71,10 @@ We decided that M0 will totally ignorant of concurrency concepts, since it is a
 "magical" concept that will be implemented at a higher level. We have started
 to refer to the level above M0 as M1 and everything above M0 as M1+.
 
-Allison also mentioned that their were many innovations and optimizations
-possible in storing isolated register sets for each Continuation (a.k.a call
-frame). This area of Parrot may yield some interesting surprises and perhaps
-some publishable findings.
+Allison also mentioned that many innovations and optimizations are possible in
+storing isolated register sets for each Continuation (a.k.a call frame). This
+area of Parrot may yield some interesting surprises and perhaps some
+publishable findings.
 
 We all agreed that M0 should be as ignorant about the GC as possible, but the
 GC will most likely learn about M0 as optimizations are implemented. The
@@ -78,7 +82,7 @@ pluggability of our GC's were also talked about. allison++ raised the question
 "Are pluggable GC's easier to maintain/implement if they are only pluggable at
 compile-time?" Indeed, they probably are, but then we run into the issue that
 our current "make fulltest" runs our test suite under differnt GC's, which
-would require multiple compiles for a single test suite. chromatic++ made a
+would require multiple compiles for a single test suite run. chromatic++ made a
 suggestion that we could instead make GC's pluggable at link-time (which would
 require a decent about of reorganization) which would still allow devs to
 easily test different GC's without recompiling all of Parrot.  chromatic++'s
