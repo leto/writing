@@ -1,0 +1,10 @@
+What I did:
+    * Some GSoCy stuff (one of our students has gone missing already)
+    * M0 work on the m0-spec and m0-prototype branches
+    * Some grant work on leto/embed_grant branch
+    * In the process of adding PL/Parrot to PGXN.org
+What I will do:
+    * More of the same
+Blockers:
+    * Lack of infinite time
+.EOR
