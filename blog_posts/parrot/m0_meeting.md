@@ -35,7 +35,17 @@ idea, "just over there", but not enough to grab ahold of. A new JIT that meets t
 goals absolutely requires something like M0, and is the driving force for its design.
 M0 will pave the way for an efficient JIT to be implemented on Parrot.
 
+M0 currently consists of under 40 opcodes from which (we wager) all the rest of Parrot
+can be built upon. This is radically different from how Parrot currently works, where
+all of the deepest internals of Parrot are written in heavily macroized ANSI 89 C.
 
+M0 has a source code, i.e. textual form and a bytecode form. chromatic++ brought up
+a good point at the beginning of the meeting about the bytecode file containing a
+cryptographic hash of the bytecode. This will allow one to distribute bytecode which
+can then be cryptographically verified by whoever eventually runs the bytecode. This
+is a very "fun" application of cryptography that I will be looking into further.
 
-
-
+allison++ brought up some good questions about how merging bytecode files would be
+done. We hadn't really thought about that, so it lead to some fruitful conversation
+about how PBC is currently merged, what it does wrong, and how M0 can do it less
+wronger.
