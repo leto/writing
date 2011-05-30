@@ -121,7 +121,37 @@ the invoke VTABLE would setup a return continuation (i.e. make a copy of the
 program counter), do a goto_chunk, and let the callee handle the rest, such
 as looking up a return continuation and invoking it.
 
-TODO: list next actions
+After the main M0 meeting, cotto++, allison++ and I sat down at a coffee shop
+and came up with a list of next actions for M0:
 
-SUMMARY
++ Write a recursive version of 'calculate the n-th Fibonacci number' in M0
++ Write a simple checksum algorithm in M0 (suggestions?)
++ Create a working PMC in M0
++ M0 disassembler
++ Create a "glossary brochure for Github cruisers"
++ Implement function calls and returns
++ Make sure each M0 opcode is tested via Devel::Cover
++ Convert M0 assembler to C
++ Convert M0 interpreter to C
++ Link M0 into libparrot (no-op integration)
 
+I have been talking to cotto++ on IRC while typing up these notes and we have
+come to the conclusion that a "bytecode verifier" should also be put on that
+list. A verifier is a utility that detects invalid bytecode and prevent attacks
+via malicious bytecode. This is something that happens at runtime, where as a
+bytecode checksum happens *before* runtime, or at the end of compile time.
+They provide different kinds of insurance. The bytecode checksum feature will
+be an instrinsic feature that is not optional, since it prevents Parrot from
+running known-bad bytecode. But a bytecode verifier adds a significant amount
+of overhead. This overhead is reasonable if you are running untrusted code, but
+it is unreasonable when your are running trusted bytecode (i.e. bytecode that
+you created), so the verifier will have an option to be turned off.
+
+We obviously have a lot of fun stuff to work on, so if any of it sounds fun,
+come ask cotto++ or me (dukeleto) on #parrot on irc.parrot.org for some M0
+stuff to do. We especially need help with writing tests and documentation.
+
+There is a Parrot hackathon at YAPC::NA this year, where I am sure some
+M0-related hacking will be happening. If you have never been to a hackathon
+before, I highly recommend them as a way to join a project and/or community.
+Meatspace is still the best medium for some things :)
