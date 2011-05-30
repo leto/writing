@@ -1,6 +1,6 @@
 I met with fellow [Parrot](http://parrot.org) hackers
 [allison++](http://allisonrandal.com), [cotto++](http://reparrot.blogspot.com)
-and chromatic++ recently in Portland, OR (it was jokingly called YAPC::OR on
+and [chromatic++](http://www.wgz.org/~chromatic/) recently in Portland, OR (it was jokingly called YAPC::OR on
 IRC) to talk about what we call
 [M0](https://github.com/parrot/parrot/blob/m0-spec/docs/pdds/draft/pdd32_m0.pod).
 M0 stands for "magic level 0" and it is a refactoring of Parrot internals in a
@@ -14,14 +14,15 @@ which the rest of the VM can be built with. The term "magic" means high-level
 constructs and conveniences, such as objects, lexical variables, classes and
 their associated syntax sugar. M0 is not meant to be written by humans, except
 during bootstrapping. In the future, M0 will be probably be generated from
-PIR/NQP or other High Level Languages (HLLs).
+Parrot Intermediate Representation (PIR), Not Quite Perl 6 (NQP) or other High Level Languages (HLLs).
 
 The most important reason for M0 is to correct the fact that too much of Parrot
 internals are written in C. Parrot internals is constantly switching between
 code written in PIR, other HLL's such as NQP and C. Many types of optimizations
 go right out the window when you cross a language boundary. It is best for a
-virtual machine to minimize crossing language boundaries if an efficient JIT
-compiler is wanted, which we definitely desire. Since many hotpaths in Parrot
+virtual machine to minimize crossing language boundaries if an efficient 
+[JIT compiler](https://secure.wikimedia.org/wikipedia/en/wiki/Just-in-time_compilation)
+is wanted, which we definitely desire. Since many hotpaths in Parrot
 internals cross between PIR and C, they can't be inlined or optimized as much
 as we would like.
 
@@ -58,8 +59,8 @@ that I will be looking into further.
 
 allison++ brought up some good questions about how merging bytecode files would
 be done. We hadn't really thought about that, so it lead to some fruitful
-conversation about how PBC is currently merged, what it does wrong, and how M0
-can do it less wronger.
+conversation about how Parrot Bytecode (PBC) is currently merged, what it does
+wrong, and how M0 can do it less wronger.
 
 We then talked about what exactly a "Continuation" in M0 means, and tried to clear
 up some definitions between what is actually meant by Context, State and Continuation.
@@ -72,10 +73,11 @@ region will reduce cache misses. We are filing this under "good to know and we
 will do that when we get there."
 
 Next we turned to concurrency, including how we would emulate the various
-concurrency models of the languages we want to support, such as Python's GIL.
-We decided that M0 will totally ignorant of concurrency concepts, since it is a
-"magical" concept that will be implemented at a higher level. We have started
-to refer to the level above M0 as M1 and everything above M0 as M1+.
+concurrency models of the languages we want to support, such as Python's Global
+Interpreter Lock (GIL).  We decided that M0 will totally ignorant of
+concurrency concepts, since it is a "magical" concept that will be implemented
+at a higher level. We have started to refer to the level above M0 as M1 and
+everything above M0 as M1+.
 
 allison++ also mentioned that many innovations and optimizations are possible in
 storing isolated register sets for each Continuation (a.k.a call frame). This
@@ -155,7 +157,8 @@ We obviously have a lot of fun stuff to work on, so if any of it sounds fun,
 come ask cotto++ or me (dukeleto) on #parrot on irc.parrot.org for some M0
 stuff to do. We especially need help with writing tests and documentation.
 
-There is a Parrot hackathon at YAPC::NA this year, where I am sure some
-M0-related hacking will be happening. If you have never been to a hackathon
-before, I highly recommend them as a way to join a project and/or community.
-Meatspace is still the best medium for some things :)
+There will be a Parrot hackathon at [YAPC::NA](http://www.yapc2011.us/yn2011/)
+2 this year, where I am sure some M0-related hacking will be happening. If you
+have never been to a hackathon before, I highly recommend them as a way to join
+a project and/or community.  Meatspace is still the best medium for some things
+:)
