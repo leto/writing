@@ -90,7 +90,8 @@ what GC was used when it was generated, i.e. the same M0 source code run under
 two different GC's would generate two different bytecode representations. This
 would happen if the M0 alloc() opcode assumes C calling conventions. This was
 generally deemed distasteful, so our alloc() opcode will not "bake in C
-assumptions", which is a good general principle, as well.
+assumptions", which is a good general principle, as well. This will be a fun
+test to write.
 
 allison++ brought up the fact that we may need a way to tell the GC "this is
 allocated but uninitialized memory", a.k.a solve the "infant mortality"
@@ -99,3 +100,22 @@ our alloc opcode (which currently has an arbitrary/unused argument, since all
 M0 opcodes take 3 arguments for symmetry and performance reasons). This could
 be as simple as hints that a variable is local or global, or a more detailed
 delineation using bit flags.
+
+It was also decided that we didn't need an invoke opcode and that invoke properly
+belongs as a VTABLE method on invokables.
+
+We also talked about the fact that register machines greatly benefit from 
+concentrating VM operations on either the caller or the callee side. Looking
+for more references about this. It seems that the callee side seems to be
+what we will try for, but I am not quite sure why.
+
+We finally talked about calling conventions and decided that goto_chunk should
+roughly be equivalent to a jmp (assembly unconditional jump to address) and
+the invoke vtable would setup a return continuation (i.e. make a copy of the
+program counter), do a goto_chunk, and let the callee handle the rest, such
+as looking up a return continuation and invoking it.
+
+TODO: list next actions
+
+SUMMARY
+
