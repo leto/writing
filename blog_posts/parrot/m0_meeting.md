@@ -73,7 +73,7 @@ We decided that M0 will totally ignorant of concurrency concepts, since it is a
 "magical" concept that will be implemented at a higher level. We have started
 to refer to the level above M0 as M1 and everything above M0 as M1+.
 
-Allison also mentioned that many innovations and optimizations are possible in
+allison++ also mentioned that many innovations and optimizations are possible in
 storing isolated register sets for each Continuation (a.k.a call frame). This
 area of Parrot may yield some interesting surprises and perhaps some
 publishable findings.
