@@ -12,7 +12,7 @@ their associated syntax sugar. M0 is not meant to be written by humans, except
 during bootstrapping. In the future, M0 will be probably be generated from
 PIR/NQP or other HLL's.
 
-The most important reason for M0 is to correct the fact tha too much of Parrot
+The most important reason for M0 is to correct the fact that too much of Parrot
 internals are written in C. Parrot internals is constantly switching between
 code written in PIR, other HLL's such as NQP and C. Many types of optimizations
 go right out the window when you cross a language boundary. It is best for a
@@ -25,7 +25,7 @@ A few years back, Parrot had a JIT compiler, from which many lessoned were
 learned.  I am sure some people were frustrated when we removed it in 1.7.0 but
 sometimes, it is best to start from a clean slate with many more lessons
 learned under your belt. Our old JIT only worked on x86 architectures and
-required maintaining a "JIT version" of every op on each architecture
+required maintaining a "JIT version" of every opcode on each architecture
 supported.  Clearly, this method was not going to scale or be maintainable.
 
 I will venture to say that M0 is the culmination of the lessons learned from
@@ -35,7 +35,7 @@ you do something absolutely perfectly, you aren't learning.
 
 We are at an exciting time in Parrot's history, in that for a long time, we
 wanted an elegant JIT, using all the latest spiffy techniques, but it was
-always an abstract idea, "just over there", but not enough to grab ahold of. A
+always an abstract idea, "just over there", but not enough to grab a-hold of. A
 new JIT that meets these goals absolutely requires something like M0, and is
 the driving force for its design.  M0 will pave the way for an efficient JIT to
 be implemented on Parrot.
@@ -61,9 +61,10 @@ We then talked about what exactly a "Continuation" in M0 means, and tried to cle
 up some definitions between what is actually meant by Context, State and Continuation.
 
 chromatic++ also mentioned that an optional optimization for the GC would be
-for it to create a memory pool specificically to store Continuations, since
-they will be heavily used and many of them will be short-lived. We are filing
-this under "good to know and we will do that when we get there."
+for it to create a memory pool solely to store Continuations, since they will
+be heavily used and many of them will be short-lived and reference each other,
+so having them in a small confined memory region will reduce cache misses. We
+are filing this under "good to know and we will do that when we get there."
 
 Next we turned to concurrency, including how we would emulate the various
 concurrency models of the languages we want to support, such as Python's GIL.
@@ -81,10 +82,10 @@ GC will most likely learn about M0 as optimizations are implemented. The
 pluggability of our GC's were also talked about. allison++ raised the question
 "Are pluggable GC's easier to maintain/implement if they are only pluggable at
 compile-time?" Indeed, they probably are, but then we run into the issue that
-our current "make fulltest" runs our test suite under differnt GC's, which
+our current "make fulltest" runs our test suite under different GC's, which
 would require multiple compiles for a single test suite run. chromatic++ made a
 suggestion that we could instead make GC's pluggable at link-time (which would
-require a decent about of reorganization) which would still allow devs to
+require a decent about of reorganization) which would still allow developers to
 easily test different GC's without recompiling all of Parrot.  chromatic++'s
 estimate is that removing runtime pluggability of GC's would result in an
 across the board speed improvement of 5%.
@@ -115,7 +116,7 @@ what we will try for, but I am not quite sure why.
 
 We finally talked about calling conventions and decided that goto_chunk should
 roughly be equivalent to a jmp (assembly unconditional jump to address) and
-the invoke vtable would setup a return continuation (i.e. make a copy of the
+the invoke VTABLE would setup a return continuation (i.e. make a copy of the
 program counter), do a goto_chunk, and let the callee handle the rest, such
 as looking up a return continuation and invoking it.
 
