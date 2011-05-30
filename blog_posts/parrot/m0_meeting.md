@@ -60,11 +60,12 @@ can do it less wronger.
 We then talked about what exactly a "Continuation" in M0 means, and tried to clear
 up some definitions between what is actually meant by Context, State and Continuation.
 
-chromatic++ also mentioned that an optional optimization for the GC would be
-for it to create a memory pool solely to store Continuations, since they will
-be heavily used and many of them will be short-lived and reference each other,
-so having them in a small confined memory region will reduce cache misses. We
-are filing this under "good to know and we will do that when we get there."
+chromatic++ also mentioned that an optional optimization for the garbage
+collector (GC) would be for it to create a memory pool solely to store
+Continuations, since they will be heavily used and many of them will be
+short-lived and reference each other, so having them in a small confined memory
+region will reduce cache misses. We are filing this under "good to know and we
+will do that when we get there."
 
 Next we turned to concurrency, including how we would emulate the various
 concurrency models of the languages we want to support, such as Python's GIL.
@@ -109,7 +110,7 @@ delineation using bit flags.
 It was also decided that we didn't need an invoke opcode and that invoke properly
 belongs as a VTABLE method on invokables.
 
-We also talked about the fact that register machines greatly benefit from 
+We also talked about the fact that register machines greatly benefit from
 concentrating VM operations on either the caller or the callee side. Looking
 for more references about this. It seems that the callee side seems to be
 what we will try for, but I am not quite sure why.
