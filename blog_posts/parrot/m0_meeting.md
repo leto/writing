@@ -134,15 +134,16 @@ and came up with a list of next actions for M0:
 + Write a simple checksum algorithm in M0 (suggestions?)
 + Create a working PMC in M0
 + M0 disassembler
-+ Create a "glossary brochure for Github cruisers"
++ Create a "glossary brochure for [Github](https://github.com) cruisers"
 + Implement function calls and returns
-+ Make sure each M0 opcode is tested via Devel::Cover
-+ Convert M0 assembler to C
-+ Convert M0 interpreter to C
++ Make sure each M0 opcode is tested via [Devel::Cover](http://search.cpan.org/dist/Devel-Cover/)
++ Convert the [M0 assembler](https://github.com/parrot/parrot/blob/m0-prototype/src/m0/m0_assembler.pl) to C
++ Convert the [M0 interpreter](https://github.com/parrot/parrot/blob/m0-prototype/src/m0/m0_interp.pl) to C
 + Link M0 into libparrot (no-op integration)
 
 I have been talking to cotto++ on IRC while typing up these notes and we have
-come to the conclusion that a "bytecode verifier" should also be put on that
+come to the conclusion that a ["bytecode verifier"](https://secure.wikimedia.org/wikipedia/en/wiki/Java_Virtual_Machine#Bytecode_verifier)
+should also be put on that
 list. A verifier is a utility that detects invalid bytecode and prevent attacks
 via malicious bytecode. This is something that happens at runtime, where as a
 bytecode checksum happens *before* runtime, or at the end of compile time.
@@ -154,7 +155,7 @@ it is unreasonable when your are running trusted bytecode (i.e. bytecode that
 you created), so the verifier will have an option to be turned off.
 
 We obviously have a lot of fun stuff to work on, so if any of it sounds fun,
-come ask cotto++ or me (dukeleto) on #parrot on irc.parrot.org for some M0
+come ask cotto++ or me (dukeleto) on #parrot on irc://irc.parrot.org for some M0
 stuff to do. We especially need help with writing tests and documentation.
 
 There will be a Parrot hackathon at [YAPC::NA](http://www.yapc2011.us/yn2011/)
