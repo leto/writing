@@ -29,7 +29,7 @@ as we would like.
 A few years back, Parrot had a JIT compiler, from which many lessoned were
 learned.  I am sure some people were frustrated when we removed it in 1.7.0 but
 sometimes, it is best to start from a clean slate with many more lessons
-learned under your belt. Our old JIT only worked on x86 architectures and
+learned under your belt. Our old JIT did support multiple architectures but
 required maintaining a "JIT version" of every opcode on each architecture
 supported.  Clearly, this method was not going to scale or be maintainable.
 
@@ -160,7 +160,7 @@ come ask cotto++ or me (dukeleto) on #parrot on irc://irc.parrot.org for some M0
 stuff to do. We especially need help with writing tests and documentation.
 
 There will be a Parrot hackathon at [YAPC::NA](http://www.yapc2011.us/yn2011/)
-2 this year, where I am sure some M0-related hacking will be happening. If you
+this year, where I am sure some M0-related hacking will be happening. If you
 have never been to a hackathon before, I highly recommend them as a way to join
 a project and/or community.  Meatspace is still the best medium for some things
 :)
