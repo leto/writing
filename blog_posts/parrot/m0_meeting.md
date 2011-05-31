@@ -164,3 +164,6 @@ this year, where I am sure some M0-related hacking will be happening. If you
 have never been to a hackathon before, I highly recommend them as a way to join
 a project and/or community.  Meatspace is still the best medium for some things
 :)
+
+(UPDATE: Some factual errors about our old JIT were pointed out by rafl++ and
+corrected)
