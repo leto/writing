@@ -73,8 +73,9 @@ region will reduce cache misses. We are filing this under "good to know and we
 will do that when we get there."
 
 Next we turned to concurrency, including how we would emulate the various
-concurrency models of the languages we want to support, such as Python's Global
-Interpreter Lock (GIL).  We decided that M0 will totally ignorant of
+concurrency models of the languages we want to support, such as Python's [Global
+Interpreter Lock (GIL)](https://secure.wikimedia.org/wikipedia/en/wiki/Global_Interpreter_Lock).
+We decided that M0 will totally ignorant of
 concurrency concepts, since it is a "magical" concept that will be implemented
 at a higher level. We have started to refer to the level above M0 as M1 and
 everything above M0 as M1+.
