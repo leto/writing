@@ -93,7 +93,7 @@ compile-time?" Indeed, they probably are, but then we run into the issue that
 our current "make fulltest" runs our test suite under different GC's, which
 would require multiple compiles for a single test suite run. chromatic++ made a
 suggestion that we could instead make GC's pluggable at link-time (which would
-require a decent about of reorganization) which would still allow developers to
+require a decent amount of reorganization) which would still allow developers to
 easily test different GC's without recompiling all of Parrot.  chromatic++'s
 estimate is that removing runtime pluggability of GC's would result in an
 across the board speed improvement of 5%.
