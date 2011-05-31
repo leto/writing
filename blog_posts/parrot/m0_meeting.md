@@ -122,10 +122,10 @@ concentrating VM operations on either the caller or the callee side. Looking
 for more references about this. It seems that the callee side seems to be
 what we will try for, but I am not quite sure why.
 
-We finally talked about calling conventions and decided that goto_chunk should
+We finally talked about calling conventions and decided that goto\_chunk should
 roughly be equivalent to a jmp (assembly unconditional jump to address) and
 the invoke VTABLE would setup a return continuation (i.e. make a copy of the
-program counter), do a goto_chunk, and let the callee handle the rest, such
+program counter), do a goto\_chunk, and let the callee handle the rest, such
 as looking up a return continuation and invoking it.
 
 After the main M0 meeting, cotto++, allison++ and I sat down at a coffee shop
