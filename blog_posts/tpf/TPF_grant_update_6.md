@@ -1,7 +1,7 @@
 # Yet Another TPF Parrot Embed/Extend Grant Update
 
 I am excited to announce that I have completed my next grant milestone!  I
-recently increased test coverage of extend_vtable.c to over 95% (
+recently increased test coverage of extend\_vtable.c to over 95% (
 [95.5%](http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend_vtable-c.html) to be
 exact), achieving the milestone with a half percent buffer. It definitely
 wasn't easy, but I changed the way I was approaching writing tests and it
@@ -16,8 +16,8 @@ to already covered functions, and then finally I got to the hard functions.
 
 This was a fruitful exercise, because it was decided by Parrot developers that
 some VTABLE functions escaped accidentally and that they should be removed from the public API.
-Whiteknight++ removed Parrot_PMC_destroy, which I was using incorrectly in the
-extend_vtable tests and which was actually coredumping Parrot, but only on certain
+Whiteknight++ [removed Parrot_PMC_destroy (extra points for humor)](https://github.com/parrot/parrot/commit/cbfc76e64acf9f0a526b5f7da0e4c6c4ec0d1189), which I was using incorrectly in the
+extend\_vtable tests and which was actually coredumping Parrot, but only on certain
 platforms. I then removed Parrot_PMC_mark and Parrot_PMC_invoke, the first being
 an implementation detail of the garbage collector, and Parrot_PMC_invoke because
 it was the only function that returned a '''Parrot_Opcode_t*''' and basically
@@ -27,7 +27,7 @@ I also [created a ticket (TT#2126)](http://trac.parrot.org/parrot/ticket/2126)
 for a bug in the Parrot_PMC_morph function, which
 has some possibly buggy but definitely unspecified behavior.
 
-The remaining, untested functions in extend_vtable are clone_pmc, cmp_pmc,
+The remaining, untested functions in extend\_vtable are clone\_pmc, cmp\_pmc,
 get_pointer_keyed_int, get_pointer_keyed_str, remove_vtable_override,
 set_pointer_keyed and set_pointer_keyed_str. I leave the testing of these
 functions as an exercise to the interested reader :)
@@ -51,7 +51,7 @@ To summarize, I have two grant milestones left, increasing extend.c (currently
 at [61%](http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend-c.html) )
 and embed/api.c to 95% coverage.
 
-Given the lessons learned from testing extend_vtable and based on the fact that
+Given the lessons learned from testing extend\_vtable and based on the fact that
 I have already [made some
 headway](https://github.com/parrot/parrot/commit/b59b869c9dd6f51109aa41e495082e09844ba348),
 my new estimate for these milestones is three weeks each. To make this more
