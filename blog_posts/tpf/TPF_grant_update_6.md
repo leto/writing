@@ -18,7 +18,7 @@ This was a fruitful exercise, because it was decided by Parrot developers that
 some VTABLE functions escaped accidentally and that they should be removed from the public API.
 Whiteknight++ [removed Parrot_PMC_destroy (extra points for humor)](https://github.com/parrot/parrot/commit/cbfc76e64acf9f0a526b5f7da0e4c6c4ec0d1189), which I was using incorrectly in the
 extend\_vtable tests and which was actually coredumping Parrot, but only on certain
-platforms. I then removed Parrot_PMC_mark and Parrot_PMC_invoke, the first being
+platforms. I then removed [Parrot_PMC_mark](https://github.com/parrot/parrot/commit/cd1edef38c9f7d4af8ec3229fa166e4fe92d21f6) and [Parrot_PMC_invoke](https://github.com/parrot/parrot/commit/44a9634f2764ccccfd7a5cbad1552159fc73bff8), the first being
 an implementation detail of the garbage collector, and Parrot_PMC_invoke because
 it was the only function that returned a '''Parrot_Opcode_t*''' and basically
 not fit for public consumption.
