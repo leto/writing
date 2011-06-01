@@ -13,10 +13,16 @@ got those out of the way. I then went for uncovered functions that were similar
 to already covered functions, and then finally I got to the hard functions.
 
 This was a fruitful exercise, because it was decided by Parrot developers that
-some VTABLE functions escaped accidentally and were removed from the public API.
+some VTABLE functions escaped accidentally and that they should be removed from the public API.
 Whiteknight++ removed Parrot_PMC_destroy, which I was using incorrectly in the
 extend_vtable tests and which was actually coredumping Parrot, but only on certain
-platforms. I then asked ...
+platforms. I then removed Parrot_PMC_mark and Parrot_PMC_invoke, the first being
+an implementation detail of the garbage collector, and Parrot_PMC_invoke because
+it was the only function that returned a '''Parrot_Opcode_t*''' and basically
+not fit for public consumption.
+
+I also created a ticket for a bug in the Parrot_PMC_morph function, which
+has some possibly buggy but definitely unspecified behavior.
 
 The remaining, untested functions in extend_vtable are clone_pmc, cmp_pmc,
 get_pointer_keyed_int, get_pointer_keyed_str, remove_vtable_override,
