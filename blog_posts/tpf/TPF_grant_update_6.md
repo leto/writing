@@ -16,20 +16,20 @@ to already covered functions, and then finally I got to the hard functions.
 
 This was a fruitful exercise, because it was decided by Parrot developers that
 some VTABLE functions escaped accidentally and that they should be removed from the public API.
-Whiteknight++ [removed Parrot_PMC_destroy (extra points for humor)](https://github.com/parrot/parrot/commit/cbfc76e64acf9f0a526b5f7da0e4c6c4ec0d1189), which I was using incorrectly in the
+Whiteknight++ [removed Parrot\_PMC\_destroy (extra points for humor)](https://github.com/parrot/parrot/commit/cbfc76e64acf9f0a526b5f7da0e4c6c4ec0d1189), which I was using incorrectly in the
 extend\_vtable tests and which was actually coredumping Parrot, but only on certain
-platforms. I then removed [Parrot_PMC_mark](https://github.com/parrot/parrot/commit/cd1edef38c9f7d4af8ec3229fa166e4fe92d21f6) and [Parrot_PMC_invoke](https://github.com/parrot/parrot/commit/44a9634f2764ccccfd7a5cbad1552159fc73bff8), the first being
-an implementation detail of the garbage collector, and Parrot_PMC_invoke because
-it was the only function that returned a '''Parrot_Opcode_t*''' and basically
+platforms. I then removed [Parrot\_PMC\_mark](https://github.com/parrot/parrot/commit/cd1edef38c9f7d4af8ec3229fa166e4fe92d21f6) and [Parrot\_PMC\_invoke](https://github.com/parrot/parrot/commit/44a9634f2764ccccfd7a5cbad1552159fc73bff8), the first being
+an implementation detail of the garbage collector, and Parrot\_PMC\_invoke because
+it was the only function that returned a '''Parrot\_Opcode\_t*''' and basically
 not fit for public consumption.
 
 I also [created a ticket (TT#2126)](http://trac.parrot.org/parrot/ticket/2126)
-for a bug in the Parrot_PMC_morph function, which
+for a bug in the Parrot\_PMC\_morph function, which
 has some possibly buggy but definitely unspecified behavior.
 
 The remaining, untested functions in extend\_vtable are clone\_pmc, cmp\_pmc,
-get_pointer_keyed_int, get_pointer_keyed_str, remove_vtable_override,
-set_pointer_keyed and set_pointer_keyed_str. I leave the testing of these
+get\_pointer\_keyed\_int, get\_pointer\_keyed\_str, remove\_vtable\_override,
+set\_pointer\_keyed and set\_pointer\_keyed\_str. I leave the testing of these
 functions as an exercise to the interested reader :)
 
 ## Grant Refactoring
