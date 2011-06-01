@@ -8,7 +8,7 @@ wasn't easy, but I changed the way I was approaching writing tests and it
 resulted in a [huge burst of
 productivity](https://github.com/parrot/parrot/compare/5dd8c543ab...8c04cc3e66).
 
-I went through a test coverage report and wrote down, on an actual peice of
+I went through a test coverage report and wrote down, on an actual piece of
 *paper*, every function that had no test coverage. This allowed me to circle
 the functions that I thought would be easiest to write tests for, and quickly
 got those out of the way. I then went for uncovered functions that were similar
@@ -30,7 +30,7 @@ has some possibly buggy but definitely unspecified behavior.
 The remaining, untested functions in extend_vtable are clone_pmc, cmp_pmc,
 get_pointer_keyed_int, get_pointer_keyed_str, remove_vtable_override,
 set_pointer_keyed and set_pointer_keyed_str. I leave the testing of these
-funcitons as an exercise to the interested reader :)
+functions as an exercise to the interested reader :)
 
 ## Grant Refactoring
 
