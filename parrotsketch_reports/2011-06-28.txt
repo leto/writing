@@ -1,0 +1,17 @@
+What I did:
+    * Met atrodo++, soh_cah_toa++, util++ for the first time at YAPC::NA 2011
+    * Working on my "Visual Intro to Parrot Virtual Machine" talk that I will give tomorrow
+    * Git cloned winxed and Rosella for the first time and played around with them
+    * Got a commit bit to Rosella
+    * Fixed a bug in the Rosella test suite where the memoize tests failed on 32bit machines
+    * Talked with cotto++ and chromatic++ about what language should be used to generate M0 code
+    * Met with cotto++, particle++ and kid51++ and talked about Parrot Foundation stuff
+    * Contacted the Software Freedom Conservancy ( http://sfconservancy.org ) about Parrot
+      joining their ranks, so we don't have parrot hackers attempting to IRS paperwork and other non -Ofun stuff
+What I will do:
+    * Attend the Parrot/Perl 6 BOF tonight
+    * Give my talk tomorrow
+    * Attend the Parrot hackaton on Thursday
+Blockers:
+    * Lack of a waterproof laptop so I can hack in the hotel pool
+.EOR
