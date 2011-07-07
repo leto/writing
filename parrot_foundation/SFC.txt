@@ -1,0 +1,80 @@
+* Please give a detailed description of the project.
+
+Parrot Virtual Machine is a portable register-based application virtual machine
+intended as a research platform for dynamic languages as well as having the
+goal of allowing "language interoperability", i.e. the ability of one language
+running on Parrot (usually called a High Level Language (HLL)) to use libraries
+from another language.
+
+* What FLOSS License(s) does your project use?  Please include the
+primary license, and list other licenses for code that is included.
+(e.g., "The project as a whole is GPLv3-or-later, but about a dozen
+files in the directory src/external/ are under the Apache-2.0
+license")
+
+All core code is Artistic 2.0. All external code that is bundled with
+Parrot is the in the ext/ directory, XXX more details.
+
+* Please give us your roadmap and plans for future development of the
+project, including both code and community plans.
+
+* Please give us the main link to the projects primary website.
+
+http://parrot.org
+
+* Please give us a URL to a code repository we can clone and/or
+checkout.
+
+https://github.com/parrot/parrot
+
+* Have you ever had funds held by the project, or by any individual
+on behalf of the project?  How and for what did you spend those
+funds?
+
+* Does your project owe funds to anyone?
+
+Not to my knowledge, although we do have a few recurring small
+expenses, such as a fax number and PO box.
+
+* Has your project ever had legal trouble, been involved in legal
+proceedings or received a letter accusing your project of patent,
+copyright, trademark or other types of infringement?
+
+Not to my knowledge.
+
+* Please give a brief history of the project, focusing on how the
+community developed and the general health of the community.  Be sure
+to include information on any forks or other disputes that have
+occurred in the community.
+
+* Please explain how your project is governed.  Who makes the
+decisions in the project?  How do you resolve disputes,
+particularly about non-code issues?
+
+* If your project runs on Linux-based systems, please list all the
+distributions that include your project, and what "repository area"
+the package appears in.  If you aren't packaged for any major
+distributions, please tell us why you believe your project hasn't
+been packaged yet.
+
+* Does your project have any existing for-profit or non-profit
+affiliations, funding relationships, or other agreements between the
+project and/or key leaders of your project and other
+organizations?  Has the project had such affiliations in the past?
+Please list of all of them in detail and explain their
+nature. Even tangential affiliations and relationships should be
+included.
+
+* Approximately how many users does your project have, and what items
+lead you to believe your userbase is of a particular size (e.g., post
+counts to your user mailing list)?
+
+Our biggest "user" is Rakudo Perl 6, which itself has many developers
+(which are our users) and dozens to hundreds of users (which are our
+users once removed.)
+
+* Please list the names, email addresses, and affiliations (e.g.,
+employer) of key developers and major contributors.  Include both
+current and past contributors and developers.  Please include date
+ranges of when those developers/contributors were active.
+
