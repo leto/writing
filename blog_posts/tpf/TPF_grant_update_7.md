@@ -3,7 +3,10 @@
 ## Really TLDR: The Parrot has landed.
 
 It brings me great joy to announce that I have completed all milestones for my
-[TPF](http://perlfoundation.org) [grant regarding the Parrot Embed/Extend subsystems]()!
+[TPF](http://perlfoundation.org) [grant regarding the Parrot Embed/Extend subsystems]
+(http://news.perlfoundation.org/2010/11/2010q4-grant-proposal-improve.html)!
+Not only that, but all of my grant work was included in the most recent release of
+Parrot, [3.5.0 "Menelaus"](http://parrot.org/news/2011/Parrot-3.5.0).
 
 The actual TLDR of this update is "many tests were written, code coverage is
 above 95% for all systems described in the grant, docs were improved, many
@@ -20,8 +23,9 @@ with adding code coverage a few rarely-if-ever-used C functions in Parrot's
 embed/exted subsystem, which allows you embed Parrot into other applications
 and other funky stuff.
 
-Whiteknight++ greatly helped me write a test for Parrot_sub_from_c XXX which
-does YYY.
+Whiteknight++ greatly helped me write a test for Parrot_sub_from_c_func which
+takes a C function and a string that describes the function signature of the C
+function and returns a Sub PMC, which can be invoked.
 
 I also learned many lessons about code coverage during the final stage of this
 grant, even though I thought I was at such a level of expertness that it would
