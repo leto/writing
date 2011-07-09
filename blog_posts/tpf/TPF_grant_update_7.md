@@ -3,7 +3,7 @@
 ## Really TLDR: The Parrot has landed.
 
 It brings me great joy to announce that I have completed all milestones for my
-grant regarding the Parrot Embed/Extend subsystems.
+[TPF](http://perlfoundation.org) [grant regarding the Parrot Embed/Extend subsystems]()!
 
 The actual TLDR of this update is "many tests were written, code coverage is
 above 95% for all systems described in the grant, docs were improved, many
