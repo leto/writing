@@ -23,9 +23,9 @@ with adding code coverage a few rarely-if-ever-used C functions in Parrot's
 embed/exted subsystem, which allows you embed Parrot into other applications
 and other funky stuff.
 
-Whiteknight++ greatly helped me write a test for Parrot_sub_from_c_func which
+Whiteknight++ greatly helped me write a test for [Parrot_sub_new_from_c_func](https://github.com/parrot/parrot/blob/master/src/extend.c#L700) which
 takes a C function and a string that describes the function signature of the C
-function and returns a Sub PMC, which can be invoked.
+function and returns a [NCI PMC](https://github.com/parrot/parrot/blob/master/src/pmc/nci.pmc), which can be invoked.
 
 I also learned many lessons about code coverage during the final stage of this
 grant, even though I thought I was at such a level of expertness that it would
@@ -41,7 +41,7 @@ competition.
 
 I noticed that a large portion (about 80%) of the uncovered code in one file
 was a macro that was copy-and-pasted into two places. I refactored this into a
-single macro called XXX, which reduced the total number of lines in the file by
+single macro called [POP_CONTEXT](https://github.com/parrot/parrot/blob/master/src/extend.c#L331), which reduced the total number of lines in the file by
 roughly 10, while simultaneously decreased the number of uncoverd lines in the
 file by ~20 lines, which had a combined effect of pushing the code coverage
 over the necessary 95% mark.
@@ -70,6 +70,6 @@ behavior of hard-to-recreate edge cases.
 I originally thought my grant would take about 3 months, but it ended up taking about
 9 or ten. QED.
 
-Finally, I would like to thank my grant manager Makamoto XXXX for providing
+Finally, I would like to thank my grant manager Makoto Nozaki for providing
 lots of feedback, support and encouragement, as well as everyone else at the
 The Perl Foundation for funding this grant.
