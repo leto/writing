@@ -9,8 +9,11 @@ Not only that, but all of my grant work was included in the most recent release 
 Parrot, [3.5.0 "Menelaus"](http://parrot.org/news/2011/Parrot-3.5.0).
 
 The actual TLDR of this update is "many tests were written, code coverage is
-above 95% for all systems described in the grant, docs were improved, many
-Parrot Trac tickets were created and many a blarg toast was cooked.
+above [95%](http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-embed-api-c.html)
+[for all](http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend-c.html)
+[systems described]( http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend-vtable-c.html)
+in the grant, docs were improved, many
+Parrot Trac tickets were created and [many](http://leto.net/dukeleto.pl/2010/12/parrot-embed-grant-update-1.html) [a](http://leto.net/dukeleto.pl/2011/01/parrot-embed-grant-update-2.html) [blarg](http://leto.net/dukeleto.pl/2011/02/parrot-embed-grant-update-3-now-with-dragons.html) [toast](http://leto.net/perl/2011/04/parrot-embed-grant-update-4-the-journey-continues.html) [was](http://leto.net/dukeleto.pl/2011/04/parrot-embed-grant-update-5-zen-pebbles.html) [cooked](http://leto.net/dukeleto.pl/2011/05/parrot-embed-grant-update-6-still-hackin-less-slackin.html).
 
 For those of you that have a thirst for knowledge unquenched (I know who you are),
 you are welcome to pondiferously peruse the Impending Technical Details.
@@ -23,7 +26,7 @@ with adding code coverage a few rarely-if-ever-used C functions in Parrot's
 embed/exted subsystem, which allows you embed Parrot into other applications
 and other funky stuff.
 
-Whiteknight++ greatly helped me write a test for Parrot_sub_from_c_func which
+[Whiteknight++](http://whiteknight.blogspot.com) greatly helped me write a test for Parrot_sub_from_c_func which
 takes a C function and a string that describes the function signature of the C
 function and returns a Sub PMC, which can be invoked.
 
