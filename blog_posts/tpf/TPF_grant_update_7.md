@@ -11,7 +11,7 @@ Parrot, [3.5.0 "Menelaus"](http://parrot.org/news/2011/Parrot-3.5.0).
 The actual TLDR of this update is "many tests were written, code coverage is
 above [95%](http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-embed-api-c.html)
 [for all](http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend-c.html)
-[systems described]( http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend-vtable-c.html)
+[systems described]( http://tapir2.ro.vutbr.cz/cover/latest-c_cover/src-extend_vtable-c.html)
 in the grant, docs were improved, many
 Parrot Trac tickets were created and [many](http://leto.net/dukeleto.pl/2010/12/parrot-embed-grant-update-1.html) [a](http://leto.net/dukeleto.pl/2011/01/parrot-embed-grant-update-2.html) [blarg](http://leto.net/dukeleto.pl/2011/02/parrot-embed-grant-update-3-now-with-dragons.html) [toast](http://leto.net/perl/2011/04/parrot-embed-grant-update-4-the-journey-continues.html) [was](http://leto.net/dukeleto.pl/2011/04/parrot-embed-grant-update-5-zen-pebbles.html) [cooked](http://leto.net/dukeleto.pl/2011/05/parrot-embed-grant-update-6-still-hackin-less-slackin.html).
 
