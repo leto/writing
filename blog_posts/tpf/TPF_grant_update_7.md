@@ -35,8 +35,8 @@ pattern of thinking is always wrong.
 ### Lesson 1
 
 Sometimes you are the underdog and you have to interpret the rules in a new way
-in order to have a chance at winning. You need to be Ender Wiggins from Ender's
-Game: continually inventing new tactics to keep a winning edge over the
+in order to have a chance at winning. You need to be Ender Wiggins from [Ender's
+Game](https://secure.wikimedia.org/wikipedia/en/wiki/Ender's_Game): continually inventing new tactics to keep a winning edge over the
 competition.
 
 I noticed that a large portion (about 80%) of the uncovered code in one file
