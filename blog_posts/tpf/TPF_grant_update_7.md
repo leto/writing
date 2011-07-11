@@ -3,8 +3,7 @@
 ## Really TLDR: The Parrot has landed.
 
 It brings me great joy to announce that I have completed all milestones for my
-[TPF](http://perlfoundation.org) [grant regarding the Parrot Embed/Extend subsystems]
-(http://news.perlfoundation.org/2010/11/2010q4-grant-proposal-improve.html)!
+[TPF](http://perlfoundation.org) grant regarding the Parrot [Embed/Extend subsystems](http://news.perlfoundation.org/2010/11/2010q4-grant-proposal-improve.html)!
 Not only that, but all of my grant work was included in the most recent release of
 Parrot, [3.5.0 "Menelaus"](http://parrot.org/news/2011/Parrot-3.5.0).
 
@@ -26,7 +25,7 @@ with adding code coverage a few rarely-if-ever-used C functions in Parrot's
 embed/exted subsystem, which allows you embed Parrot into other applications
 and other funky stuff.
 
-[Whiteknight++](http://whiteknight.blogspot.com) greatly helped me write a test for [Parrot_sub_new_from_c_func](https://github.com/parrot/parrot/blob/master/src/extend.c#L700) which
+[Whiteknight++](http://whiteknight.github.com) greatly helped me write a test for [Parrot\_sub\_new\_from\_c\_func](https://github.com/parrot/parrot/blob/master/src/extend.c#L700) which
 takes a C function and a string that describes the function signature of the C
 function and returns a [NCI PMC](https://github.com/parrot/parrot/blob/master/src/pmc/nci.pmc), which can be invoked.
 
@@ -44,7 +43,7 @@ competition.
 
 I noticed that a large portion (about 80%) of the uncovered code in one file
 was a macro that was copy-and-pasted into two places. I refactored this into a
-single macro called [POP_CONTEXT](https://github.com/parrot/parrot/blob/master/src/extend.c#L331), which reduced the total number of lines in the file by
+single macro called [POP\_CONTEXT](https://github.com/parrot/parrot/blob/master/src/extend.c#L331), which reduced the total number of lines in the file by
 roughly 10, while simultaneously decreased the number of uncoverd lines in the
 file by ~20 lines, which had a combined effect of pushing the code coverage
 over the necessary 95% mark.
