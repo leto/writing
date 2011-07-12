@@ -1,0 +1,16 @@
+What I did:
+    * Hacked on parrot-libgit2, which now has passing tests thanks to plobsing++ https://github.com/letolabs/parrot-libgit2
+    * Finished my TPF grant and wrote a blarg toast: http://leto.net/dukeleto.pl/2011/07/a-final-tpf-parrot-embedextend-grant-update.html
+    * Attempted to get PL/Parrot compiling on Parrot master and Postgres 8.4.8 and failed.
+    * Added some code coverage to the new Embed API
+    * Started gathering information about Parrot + Parrot Foundation to apply to Software Freedom Conservancy
+    * Closed some Trac tickets that were no longer valid
+What I will do:
+    * Attempt to get PL/Parrot compiling again
+    * Write a test to show how to use libgit2 from Winxed
+    * Send an email about GSoC midterms, which are due soon
+    * Planning on writing a Hague grant for PL/Perl6
+Blockers:
+    * Only 24 hours in a day
+    * Summer
+.EOR
