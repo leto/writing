@@ -1,0 +1,13 @@
+What I did:
+    * Gave bubaflub++ a passing midterm grade
+    * Started hacking on Chimera, a firefox plugin using the FireBreath framework,
+      to embed Parrot in FF: https://github.com/letolabs/chimera
+    * Got our netbsd smoker on the GCC compile farm working again, kid51++ for noticing
+    * Hacked on parrot-libgit2 bindings, currently trying to make a Winxed test pass
+    * Greatly improved the readme for the Parrot test suite:
+        https://github.com/parrot/parrot/tree/master/t
+What I will do:
+    * Hack on PL/Parrot because I am giving a talk on it in a few days
+Blockers:
+    * meatspace
+.EOR
