@@ -118,3 +118,170 @@ employer) of key developers and major contributors.  Include both
 current and past contributors and developers.  Please include date
 ranges of when those developers/contributors were active.
 
+As of 10. November 2011, this is the complete list of authors to parrot.git
+
+ project: parrot
+ authors: 
+  4043	Leopold Toetsch <lt@toetsch.at>
+  3254	Will "Coke" Coleda <will@coleda.com>
+  2928	Bernhard Schmalhofer <Bernhard.Schmalhofer@gmx.de>
+  2312	chromatic <chromatic@wgz.org>
+  2092	Patrick R. Michaud <pmichaud@pobox.com>
+  1952	François Perrad <francois.perrad@gadz.org>
+  1940	Andy Lester <andy@petdance.com>
+  1652	Paul Cochrane <paultcochrane@gmail.com>
+  1583	James E Keenan (Jim) <jkeenan@cpan.org>
+  1438	Vasily Chekalkin <bacek@bacek.com>
+  1432	Klaas-Jan Stol <parrotcode@gmail.com>
+  1379	Jerry Gay <Jerry.Gay@gmail.com>
+  1204	Julian Albo <julian.notfound@gmail.com>
+  1092	Allison Randal <allison@parrot.org>
+   991	Peter Lobsinger <plobsing@gmail.com>
+   987	Michael H. Hind <mike.hind@gmail.com>
+   967	Dan Sugalski <dan@sidhe.org>
+   906	Jonathan Worthington <jnthn@jnthn.net>
+   815	Matt Diephouse <matt@diephouse.com>
+   808	Christoph Otto <christoph@mksig.org>
+   806	Whiteknight <wknight8111@gmail.com>
+   796	Jonathan "Duke" Leto <jonathan@leto.net>
+   791	Andrew Whitworth <wknight8111@gmail.com>
+   477	Mark Glines <mark@glines.org>
+   477	Simon Glover <scog@aip.de>
+   455	jkeenan <jkeenan@cpan.org>
+   451	Melvin Smith <melvin.smith@mindspring.com>
+   434	Nick Wellnhofer <wellnhofer@aevum.de>
+   361	Moritz Lenz <moritz@faui2k3.org>
+   332	Steve Fink <steve@fink.com>
+   317	Simon Cozens <simon@simon-cozens.org>
+   288	Gregor N. Purdy <gregor@focusresearch.com>
+   279	Kevin Tew <tewk@tewk.com>
+   259	Daniel Grunblatt <daniel@grunblatt.com.ar>
+   257	NotFound <julian.notfound@gmail.com>
+   246	Stephen Weeks <tene@allalone.org>
+   245	Chip Salzenberg <chip@pobox.com>
+   235	Reini Urban <rurban@cpan.org>
+   218	Josh Wilmes <josh-perl6@hitchhiker.org>
+   202	Alberto Manuel Brandao Simoes <ambs@cpan.org>
+   202	Joshua Hoblitt <jhoblitt@cpan.org>
+   197	Jens Rieks <parrot@jensbeimsurfen.de>
+   188	Jeff Goff <jgoff@speakeasy.net>
+   186	Christoph Otto <christoph_github@mksig.org>
+   175	Daniel Arbelo Arrocha <arbelo@gmail.com>
+   154	Christoph Otto <christoph_git@mksig.org>
+   141	Sean O'Rourke <educated_foo@yahoo.com>
+   140	Nicholas Clark <nick@ccl4.org>
+   138	Jerome Quelin <jquelin@cpan.org>
+   134	Bob Rogers <rogers-perl6@rgrjr.dyndns.org>
+   134	Michael Scott <michael_scott@mac.com>
+   132	Geoff Broadwell (japhb) <geoff@broadwell.org>
+   129	Audrey Tang <audreyt@audreyt.org>
+   129	Bruce Gray <bruce.gray@acm.org>
+   126	Florian Ragwitz <rafl@debianforum.de>
+   116	Brent Royal-Gordon <brent@brentdax.com>
+   103	Gerd Pokorra <pokorra@uni-siegen.de>
+   100	Fernando Brito <email@fernandobrito.com>
+    93	Francois Perrad <francois.perrad@gadz.org>
+    93	Sam Ruby <rubys@intertwingly.net>
+    89	Coke <will@coleda.com>
+    86	Clinton A. Pierce <clintp@geeksalad.org>
+    82	Joshua Isom <loneowl@ritalin.shout.net>
+    71	Alex Gough <alex@earth.li>
+    71	Jimmy Zhuo <zhuomingliang@yahoo.com.cn>
+    71	Mike Lambert <perl-dev@jall.org>
+    69	Gerd Pokorra <gp@zimt.uni-siegen.de>
+    69	Nuno 'smash' Carvalho <mestre.smash@gmail.com>
+    68	Tom Hughes <tom@compton.nu>
+    67	Peter Gibbs <peter@emkel.co.za>
+    62	Michael Schroeder <mls@suse.de>
+    60	Jürgen Bömmels <boemmels@web.de>
+    58	Aaron Faanes <dafrito@gmail.com>
+    56	Tony Young <rofflwaffls@gmail.com>
+    54	Robert Spier <robert@perl.org>
+    53	soh_cah_toa <kpolulak@gmail.com>
+    50	Nolan Lum <nol888@gmail.com>
+    49	Ronald Blaschke <ron@rblasch.org>
+    49	Tanton Gibbs <thgibbs@deltafarms.com>
+    48	Nat Tuck <nat@ferrus.net>
+    41	Bob Kuo <bobjkuo@gmail.com>
+    35	Andy Dougherty <doughera@lafayette.edu>
+    35	Stefan Seifert <nine@detonation.org>
+    32	pmichaud <pmichaud@pobox.com>
+    29	Matt Rajca <matt.rajca@me.com>
+    27	Brian Gernhardt <brian.gernhardt@mail.rit.edu>
+    27	Luben Karavelov <karavelov@spnet.net>
+    25	Jonathan Scott Duff <duff@pobox.com>
+    25	Luke Palmer <luke@luqui.org>
+    24	Cory Spencer <cspencer@sprocket.org>
+    23	Vishal Soni <vishalrsoni@gmail.com>
+    22	David M. Lloyd <dmlloyd@tds.net>
+    21	Brian Wheeler <bdwheele@indiana.edu>
+    21	David Czech <davidczech510@gmail.com>
+    21	Jarkko Hietaniemi <jhi@iki.fi>
+    20	Amos Robinson <amos@coscom.net>
+    20	Mariano Wahlmann <mariano@hal.(none)>
+    18	Felipe Pena <felipensp@gmail.com>
+    18	Tadeusz Sośnierz <tadzikes@gmail.com>
+    17	Carl Masak <cmasak@gmail.com>
+    17	David Ross <david@hackbinary.com>
+    17	Jeff Horwitz <jeff@smashing.org>
+    17	Tyler Curtis <tyler.l.curtis@gmail.com>
+    16	Ask Bjørn Hansen <ask@develooper.com>
+    16	Colin Kuskie <ckuskie@sterling.net>
+    14	Charles Reiss <creiss@cc.gatech.edu>
+    14	Gerhard R <gerd.r.devel@googlemail.com>
+    13	Damian Miles Knopp <dmknopp@loyola.edu>
+    12	Jesse Taylor <jrtayloriv@gmail.com>
+    11	Paul C. Anagnostopoulos <paul@windfall.com>
+    10	bluescreen <dichoso@gmail.com>
+     9	Léo Grange <grangeleo@gmail.com>
+     9	cotto <christoph_github@mksig.org>
+     9	sygi <sygnowski@gmail.com>
+     8	Akash Manohar J <akash@akash.im>
+     8	Nick Glencross <nick.glencross@gmail.com>
+     8	purl <purl@localhost>
+     7	John Harrison <ash@greatethaninfinity.com>
+     7	Stéphane Peiry <stephane@modxml.org>
+     7	luben <karavelov@spnet.net>
+     6	Leon Brocard <acme@astray.com>
+     6	bluescreen10 <dichoso@gmail.com>
+     5	Austin Hastings <austin_hastings@yahoo.com>
+     5	gerd <gp@zimt.uni-siegen.de>
+     5	ligne <matt.boyle@gmail.com>
+     4	Amir Karger <akarger@cgr.harvard.edu>
+     4	Curtis Rawls <cgrawls@gmail.com>
+     4	Géraud Continsouzas <geraud@gcu.info>
+     4	Matt Boyle <mlb-github@corefiling.co.uk>
+     4	Piers Cawley <pdcawley@bofh.org.uk>
+     4	Tim Bunce <Tim.Bunce@pobox.com>
+     4	tcurtis <tyler.l.curtis@gmail.com>
+     4	vmax <vmax0770@gmail.com>
+     3	GeJ <geraud@nealab.net>
+     3	Larry Wall <larry@wall.org>
+     3	Natan Yellin <aantny@gmail.com>
+     3	Roger Browne <roger@eiffel.demon.co.uk>
+     3	coke <will@coleda.com>
+     3	unknown <awhitworth@.na.amstedrail.local>
+     2	Dan Bolser <dan.bolser@gmail.com>
+     2	GeJ <geraud@gcu.info>
+     2	Matt Schallert <mattschallert@gmail.com>
+     2	jkeenan <jkeen@verizon.net>
+     1	Allison Randal <allison@perl.org>
+     1	Andy Dougherty <doughera@fractal.phys.lafayette.edu>
+     1	Brian Gernhardt <brian@gernhardtsoftware.com>
+     1	Christoph Gaertner <cggaertner@googlemail.com>
+     1	Daniel Toma <daniel.digital2@gmail.com>
+     1	Fitz Elliott <fitz.elliott@gmail.com>
+     1	Jesse Vincent <jesse@fsck.com>
+     1	Jumpyshoes <jumpyshoes>
+     1	Kevin Polulak <kpolulak@gmail.com>
+     1	Mark Glines <infinoid@chirp.(none)>
+     1	Martin von Gagern <Martin.vGagern@gmx.net>
+     1	Michael Hind <mhw@mhw-Desktop.(none)>
+     1	Michael Stapelberg <michael@stapelberg.de>
+     1	Natan Yellin <aantn>
+     1	Nolan Lum <nlum@yukiko.(none)>
+     1	Paul Johnson <paul@pjcj.net>
+     1	mstevens <mstevens>
+     1	plobsing <plobsinger@gmail.com>
+     1	unknown <awhitworth@.internal.weblinc.com>
+     1	unknown <fperrad@.(none)>
