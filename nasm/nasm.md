@@ -12,20 +12,20 @@ languages, you really have no business reading this. Many constructs will also
 be explained in terms of C. You should also be familiar with the command line
 options of NASM, no sense going over them again here. 
 
-## Getting Started ]
+## Getting Started 
 
 So you want to write a program that actually DOES something. "Hello, world" 
 isn't cutting it anymore. First, an overview of the various parts of an 
 assembly program: (For terse documentation, the NASM manual is the place to go.)
 
-## The .data section ]
+## The .data section 
 	
 This section is for defining constants, such as filenames or buffer sizes,
 this data does not change at runtime. The NASM documentation has a good
 description of how to use the db,dd,etc instructions that are used in this
 section.
 
-## The .bss section ]
+## The .bss section 
 
 This section is where you declare your variables.
 They look something like this:
@@ -37,13 +37,13 @@ They look something like this:
 	pi:		resq	1	; REServe 1 double precision float
 	morepi:		rest	1	; REServe 1 extended precision float
 
-## The .text section ]
+## The .text section 
 
 This is where the actual assembly code is written. The term "self modifying code"
 means a program which modifies this section while being executed.
 
 
-## In The Beginning ... ]
+## In The Beginning ... 
 
 The next thing you probably noticed while looking at the source to various
 assembly programs, there always seems to be "global _start" or something similar 
@@ -52,7 +52,7 @@ telling the kernel where the program execution begins. It is exactly, to my
 knowledge, like the main function in C, other than that it is not a function, 
 just a starting point. 
 
-## The Stack and Stuff ]
+## The Stack and Stuff 
 
 Also like in C, the kernel sets up the environment with all of the environment
 variables, and sets up **argv and argc. Just in case you forgot, **argv is an
@@ -87,15 +87,15 @@ register. Let's say we ran the program on the command line as so:
 When we are are on the _start line, the stack looked something like this:
 
 	-----------
-	| 3       |	The number of arguments, including argv##0], 
+	| 3       |	The number of arguments, including argv[0], 
 	|	  |	which is the program name
 	-----------
-	|"program"|	argv##0] 
+	|"program"|	argv[0]
 	-----------
-	| "42"    |	argv##1] NOTE: This is the character "4" and "2",
+	| "42"    |	argv[1] NOTE: This is the character "4" and "2",
 	|	  |     not the number 42
 	-----------
-	| "A"     |	argv##2]
+	| "A"     |	argv[2]
 	-----------
 
 		
@@ -109,7 +109,7 @@ Now, "pop ebp" puts the program name into ebp, and then the next "pop ebp"
 overwrites it, and puts "42" into ebp. The last value of ebp is not preserved,
 and since you have popped it off of the stack, it is gone forever. 
 
-## Doing more interesting things ]
+## Doing more interesting things 
 
 Moving on, how exactly do you interact with the rest of the system? You know
 how to manipulate the stack, but how to you get the current time, or make a
@@ -134,7 +134,7 @@ function. Ok, ok, still not very useful, but we are getting there.
 A more useful example:
 	
 	pop	ebx		; argc
-	pop	ebx		; argv##0]
+	pop	ebx		; argv[0]
 	pop	ebx		; the first real arg, a filename 
 
 
@@ -232,7 +232,7 @@ like:
 What you have now just written is basically "cat", except it only prints the
 first 8192 bytes.
 
-## Portability ] 
+## Portability  
 
 In the preceding section, you saw how the call the kernel in Linux with NASM.
 This is fine if you are never ever going to use another operating system, and
@@ -253,7 +253,7 @@ will look like this:
 	
 	START:			; always starts here
 
-	sys_write STDOUT,##somestring],##strlen]
+	sys_write STDOUT,##somestring,##strlen
 
 	END			; code ends here
 
@@ -278,7 +278,7 @@ programs, such as cat,sleep,ln,head or mount, you will see that there isn't
 anything horrendously difficult about them. head was my first assembly program,
 I made extra comments on purpose, so that would be a good place to start. 
 
-## Debugging ] 
+## Debugging  
 
 Strace will definitely by your friend. It is the easiest tool to use to debug
 your problem. Most of the time when writing in assembly, other that syntax
@@ -287,7 +287,7 @@ useful information. With strace, at least you will see after which system call
 your program is choking. Example: 
 
 	$ strace ./cal2
-	execve("./cal2", ##"./cal2"], ##/* 46 vars */]) = 0
+	execve("./cal2", ##"./cal2", ##/* 46 vars */) = 0
 	read(1, "", 0)                          = 0
 	--- SIGSEGV (Segmentation fault) ---
 	+++ killed by SIGSEGV +++
@@ -307,7 +307,7 @@ complex bugs or voluminous source, but works great for finding careless
 mistakes when you are starting out. Example: 
 
 	$ strace ./cal2
-	execve("./cal2", ##"./cal2"], ##/* 46 vars */]) = 0
+	execve("./cal2", ##"./cal2", ##/* 46 vars */) = 0
 	write(1, NULL, 16)                      = 16
 	write(1, NULL, 26)                      = 26
 	write(1, NULL, 41)                      = 41
@@ -317,12 +317,12 @@ mistakes when you are starting out. Example:
 Now we know that we are still going on line 41, and the problem is after that.
 
 
-## Next ? ]
+## Next ? 
 
 Now it is your turn to explore the insides of your operating system, and take
 pride in understanding what's really going on under the covers.
 
-## Reference ]
+## Reference 
 
 Places to get more information:
 	
@@ -336,18 +336,18 @@ Places to get more information:
 	NASM - http://www.cryogen.com/Nasm 
 	Asmutils-HOWTO - doc/ directory of asmutils
 
-## Feedback ]
+## Feedback 
 
 Feedback is welcome, hopefully this was of some use to budding Unix assembly
 programmers.
 
-## Availability ]
+## Availability 
 
 The most current version of this document should be available at
 http://www.leto.net/writing/nasm.php
 
 
-## Appendix : Jumps ] 
+## Appendix : Jumps  
 
 When I first began looking at assembly source code, I saw all these crazy
 instructions like "jnz" and the like. It looked like I was going to have to
