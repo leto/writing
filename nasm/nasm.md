@@ -253,7 +253,7 @@ will look like this:
 	
 	START:			; always starts here
 
-	sys_write STDOUT,##somestring,##strlen
+	sys_write STDOUT,[somestring],[strlen]
 
 	END			; code ends here
 
@@ -287,7 +287,7 @@ useful information. With strace, at least you will see after which system call
 your program is choking. Example: 
 
 	$ strace ./cal2
-	execve("./cal2", ##"./cal2", ##/* 46 vars */) = 0
+	execve("./cal2", ["./cal2" ],/* 46 vars */) = 0
 	read(1, "", 0)                          = 0
 	--- SIGSEGV (Segmentation fault) ---
 	+++ killed by SIGSEGV +++
@@ -307,7 +307,7 @@ complex bugs or voluminous source, but works great for finding careless
 mistakes when you are starting out. Example: 
 
 	$ strace ./cal2
-	execve("./cal2", ##"./cal2", ##/* 46 vars */) = 0
+	execve("./cal2", ["./cal2" ],/* 46 vars */) = 0
 	write(1, NULL, 16)                      = 16
 	write(1, NULL, 26)                      = 26
 	write(1, NULL, 41)                      = 41
