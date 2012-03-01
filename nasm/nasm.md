@@ -264,14 +264,11 @@ constants like STDOUT or O_RDONLY, just like in C.  The "%include" statement
 works precisely as it does in C, sourcing the contents of that file. 
 
 To learn more about how to use asmutils, read the Asmutils-HOWTO, which is in
-the doc/ directory of the source. Also, to get the latest source, use the
+the doc/ directory of the source. Also, to get the [latest source repository](https://github.com/leto/asmutils), use the
 following commands: 
 
-export CVS_RSH=ssh
-cvs -d:pserver:anonymous@cvs.linuxassembly.org:/cvsroot/asm login
-cvs -z3 -d:pserver:anonymous@cvs.linuxassembly.org:/cvsroot/asm co asmutils
+    git clone git://github.com/leto/asmutils.git
 
-	
 This will download the newest, bleeding edge source into a subdirectory called
 "asmutils" of your current directory. Take a look at some of the simpler
 programs, such as cat,sleep,ln,head or mount, you will see that there isn't
