@@ -1,0 +1,18 @@
+Polyglot Paas Without Vender Lock-In
+
+"Platform-as-a-service" or Paas is still a relatively new niche, but it is
+already undergoing rapid changes and growing in many exciting ways.
+
+The first Paas systems supported one or a few programming languages and
+frameworks (such as Google App Engine) but with severe limitations. The
+limitations came in the form of only allowing a subset of a programming language
+to be used as well as forcing the developer to use certain libraries and
+frameworks that the Paas required. This, whether intentional or not, is
+a type of vendor lock-in, since it means that a large amount of could
+would need to change to migrate to a different Paas.
+
+A new generation of Paas platforms have appeared with attempt to fix some or
+all of the above issues. These include Redhat Openshift, Heroku, Cloud Foundry
+and many others. This talk will serve as an outline to compare and contrast
+the open source code and services of various Paas providers with a focus on
+preventing vendor lock-in and supporting many languages and frameworks.

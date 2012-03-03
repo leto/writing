@@ -1,0 +1,19 @@
+Utilizing Travis CI
+
+There is an exciting new open source project called Travis CI that is also a
+*free* service which provides continuous integration as a service. It makes it
+trivially easy for any open source project on Github to start testing every
+commit of their code, without ever touching Hudson, Jenkins or any other scary
+CI systems.
+
+This is accomplished by adding a single configuration file to each git repo,
+which is a tiny bit of YAML that tells Travis how to run the tests for your code.
+This also has the added benefit of your CI configuration being under version control,
+instead of a forgotten config file sitting in a random place on your test server.
+
+This talk with be a brief introduction to CI and why it is so hard to setup and
+maintain for small projects as well as a more in-depth dive into making your
+own tests run on Travis CI. Examples will be shown for Ruby, Python, Perl and
+C-based projects. Other examples and languages will be shown if time allows.
+
+http://travis-ci.org
