@@ -1,0 +1,11 @@
+Jonathan "Duke" Leto has been involved with Free and Open source software for
+over 15 years and has contributed to many projects across a dozen programming
+languages.
+
+He has also been a part of various mentorship programs such as Google Summer
+of Code and Google Code-In, where students are mentored by members of the
+community.
+
+Jonathan is also a published mathematician with a Masters of Mathematics
+from the University of Central Florida and is experienced with data analysis
+and simulation.
