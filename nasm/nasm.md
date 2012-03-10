@@ -325,12 +325,12 @@ Places to get more information:
 
  * Linux Assembly - <http://www.linuxassembly.org>
  * NASM Manual ( available in doc/html directory of source )
- * Assembly Programming Journal - http://asmjournal.freeservers.com/
+ * Assembly Programming Journal - <http://mattst88.com/programming/AssemblyProgrammersJournal/>
  * Mammon_'s textbase - http://www.eccentrica.org/Mammon/sprawl/textbase.html
- * Art Of Assembly - http://webster.cs.ucr.edu/Page_asm/ArtOfAsm.html
- * Sandpile - http://www.sandpile.org
- * comp.lang.asm.x86
- * NASM - http://www.cryogen.com/Nasm 
+ * Art Of Assembly - <http://webster.cs.ucr.edu/AoA/DOS/pdf/0_AoAPDF.html>
+ * Sandpile - <http://www.sandpile.org>
+ * [comp.lang.asm.x86](https://groups.google.com/group/comp.lang.asm.x86/topics)
+ * NASM - <http://www.nasm.us/>
 
 Asmutils-HOWTO - doc/ directory of asmutils
 
@@ -339,14 +339,14 @@ Asmutils-HOWTO - doc/ directory of asmutils
 Feedback is welcome, hopefully this was of some use to budding Unix assembly
 programmers.
 
-## Availability 
+## Availability
 
 The most current version of this document is always available at
 
 <https://github.com/leto/writing/blob/master/nasm/nasm.md>
 
 
-## Appendix : Jumps  
+## Appendix : Jumps
 
 When I first began looking at assembly source code, I saw all these crazy
 instructions like "jnz" and the like. It looked like I was going to have to
