@@ -340,8 +340,9 @@ programmers.
 
 ## Availability 
 
-The most current version of this document should be available at
-http://www.leto.net/writing/nasm.php
+The most current version of this document is always available at
+
+<https://github.com/leto/writing/blob/master/nasm/nasm.md>
 
 
 ## Appendix : Jumps  
