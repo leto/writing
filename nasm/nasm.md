@@ -88,12 +88,12 @@ When we are are on the _start line, the stack looked something like this:
 
 	-----------
 	| 3       |	The number of arguments, including argv[0], 
-	|	  |	which is the program name
+	|         |	which is the program name
 	-----------
 	|"program"|	argv[0]
 	-----------
 	| "42"    |	argv[1] NOTE: This is the character "4" and "2",
-	|	  |     not the number 42
+	|         |     not the number 42
 	-----------
 	| "A"     |	argv[2]
 	-----------
@@ -322,16 +322,17 @@ pride in understanding what's really going on under the covers.
 ## Reference 
 
 Places to get more information:
-	
-	Linux Assembly - http://www.linuxassembly.org
-	NASM Manual ( available in doc/html directory of source )
-	Assembly Programming Journal - http://asmjournal.freeservers.com/
-	Mammon_'s textbase - http://www.eccentrica.org/Mammon/sprawl/textbase.html
-	Art Of Assembly - http://webster.cs.ucr.edu/Page_asm/ArtOfAsm.html
-	Sandpile - http://www.sandpile.org
-	comp.lang.asm.x86
-	NASM - http://www.cryogen.com/Nasm 
-	Asmutils-HOWTO - doc/ directory of asmutils
+
+ * Linux Assembly - <http://www.linuxassembly.org>
+ * NASM Manual ( available in doc/html directory of source )
+ * Assembly Programming Journal - http://asmjournal.freeservers.com/
+ * Mammon_'s textbase - http://www.eccentrica.org/Mammon/sprawl/textbase.html
+ * Art Of Assembly - http://webster.cs.ucr.edu/Page_asm/ArtOfAsm.html
+ * Sandpile - http://www.sandpile.org
+ * comp.lang.asm.x86
+ * NASM - http://www.cryogen.com/Nasm 
+
+Asmutils-HOWTO - doc/ directory of asmutils
 
 ## Feedback 
 
