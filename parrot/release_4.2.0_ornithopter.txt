@@ -1,0 +1,67 @@
+"Technology, in common with many other activities, tends toward avoidance of
+risks by investors. Uncertainty is ruled out if possible. Capital investment
+follows this rule, since people generally prefer the predictable. Few recognize
+how destructive this can be, how it imposes severe limits on variability and
+thus makes whole populations fatally vulnerable to the shocking ways our
+universe can throw the dice."
+    -- Assessment of Ix, Bene Gesserit Archives (Heretics of Dune)
+
+On behalf of the Parrot team, I'm proud to announce Parrot 4.2.0, also known
+as "Ornithopter".  Parrot (http://parrot.org) is a virtual machine designed
+to run all dynamic languages.
+
+Parrot 4.2.0 is available on Parrot's FTP site
+(ftp://ftp.parrot.org/pub/parrot/releases/devel/4.2.0/), or by following the
+download instructions at http://parrot.org/download.  For those who would like
+to develop on Parrot, or help develop Parrot itself, we recommend using Git to
+retrieve the source code to get the latest and best Parrot code.
+
+Parrot 4.2.0 News:
+    - API Changes
+        + The signature of getprop was changed from (PMC,String,PMC) to
+          (PMC, PMC,String) for consistency
+    - Core
+        + Parrot Calling Conventions (pcc) now reuses Continuation PMCs
+          internally, which reduces GC work by 25% and improves
+          the fib.pir benchmark by 6%
+        + Winxed snapshot updated to 1.6.devel 44a04cfa7b
+        + Improved the detection of Clang-ish compilers during configuration
+        + Fixed a possible segfault bug when reading packfiles with no
+         constants or main_sub
+        + By default, Parrot has now elevated these GCC warnings to errors
+          during compile time:
+            implicit-function-declaration, undef, missing-braces,
+            nested externs, old-style-definition, strict-prototypes,
+        + The OS Dynamic PMC now has separate functions to unlink a file
+          and remove an empty directory (rmdir)
+        + Fix building on Cygwin due to an improperly named DLL file
+        + Various small bug fixes pointed out by static and dynamic analysis
+          tools
+    - Branches
+        + Work on M0 continues now in the m0 branch, which contains both
+          implementations (currently C and Perl) and specification.
+        + Good progress has been made on the threads branch which builds
+          on the green_threads branch. This gets Parrot much closer to
+          being able to utilize multiple CPU cores seemlessly. More details
+          at http://niner.name/Hybrid_Threads_for_the_Parrot_VM.pdf
+    - Documentation
+        + New release manager documentation for parrot.github.com :
+            http://git.io/parrot-github-guide
+    - Community
+        + Parrot was accepted to Google Summer of Code 2012!
+          Ideas Page: http://git.io/parrot-gsoc-2012
+
+The SHA256 message digests for the downloadable tarballs are:
+
+a960c89f94099c9643c5623263bdb7fa9e97effb889c975382bbf9c0251186b4 parrot-4.2.0.tar.bz2
+69ee93d9f81babcff67b747cc614358958a32f274e407b65771ca5a056d4c3d4 parrot-4.2.0.tar.gz
+
+Many thanks to all Parrot contributors for making this possible, and our
+sponsors for supporting this project. This release is comprised of 136 commits
+on the master branch since 4.1.0, with contributions from : Andy Lester, Vasily
+Chekalkin,Jonathan "Duke" Leto, jkeenan, Alvis Yardley Whiteknight, Brian
+Gernhardt, Gerhard R, NotFound, Francois Perrad, Moritz Lenz and luben.
+
+Our next scheduled release is 17 April 2012.
+
+Enjoy!

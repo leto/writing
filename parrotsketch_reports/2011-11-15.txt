@@ -1,0 +1,10 @@
+What I did:
+    * hacked on parrot-libgit2
+    * unpublished/alpha blog post http://labs.leto.net/2011/11/15/parrot-libgit2-winxed-unicorns.html
+    * got Parrot into Google Code-In
+What I will do:
+    * attempt to get parrot paid for GSoC
+    * hack on GCI stuff
+Blockers:
+    * ENOTIME
+.EOR
