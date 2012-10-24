@@ -99,7 +99,11 @@ decisions in the project?  How do you resolve disputes,
 particularly about non-code issues?
 
 Currently there is a Board of Directors that has a private mailing list
-parrot-directors.
+parrot-directors. There is a yearly vote by people with a commit bit
+(parrot-members) to elect the members of the board. We have not had
+our most recent election.
+
+More details here: http://www.parrot.org/sites/www.parrot.org/files/bylaws.pdf
 
 * If your project runs on Linux-based systems, please list all the
 distributions that include your project, and what "repository area"
@@ -120,6 +124,13 @@ Please list of all of them in detail and explain their
 nature. Even tangential affiliations and relationships should be
 included.
 
+Each year Parrot Foundation takes place in Google Summer of Code
+and sometimes Google Code-In, which involves getting donations from
+Google.
+
+Parrot Foundation has received funds from Activestate, BBC, NLNet
+and Mozilla Foundation in the distant past.
+
 * Approximately how many users does your project have, and what items
 lead you to believe your userbase is of a particular size (e.g., post
 counts to your user mailing list)?
@@ -127,5 +138,3 @@ counts to your user mailing list)?
 Our biggest "user" is Rakudo Perl 6, which itself has many developers
 (which are our users) and dozens to hundreds of users (which are our
 users once removed.)
-
-
