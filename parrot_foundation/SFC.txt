@@ -44,8 +44,12 @@ we got a few years back. I think there is a sum of around $10K USD currently.
 
 * Does your project owe funds to anyone?
 
-Not to my knowledge, although we do have a few recurring small
-expenses, such as a fax number, lawyers fees to file reports and taxes and a PO box.
+We do have a few recurring small expenses, such as a fax number, lawyers fees
+to file reports and taxes and a PO box.
+
+We currently owe $221 to GARVEY SCHUBERT BARER, GSBLaw.com for preparing
+taxes. A contact there is:
+MICHAEL F BRASS Collections Manager  |  206.464.3939 x 1522 Tel  |  206.464.0125 Fax  |  mbrass@gsblaw.com
 
 * Has your project ever had legal trouble, been involved in legal
 proceedings or received a letter accusing your project of patent,
@@ -58,15 +62,15 @@ community developed and the general health of the community.  Be sure
 to include information on any forks or other disputes that have
 occurred in the community.
 
-Parrot started as a new virtual machine for Perl 6 in 2001. It gradually become
-a seperate project which aimed to be a virtual machine for all dynamic
+Parrot started as a new virtual machine for Perl 6 in 2001. It gradually became
+a separate project which aimed to be a virtual machine for all dynamic
 languages, since Perl 6 wanted to support just about every feature a dynamic
 language would want.
 
 Originally there was a CVS repo, which was converted to Subversion many years
 ago, which was converted to Git+Github by Jonathan "Duke" Leto. During the
 Subversion Middle Ages, many projects "left the nest" and started being
-developed in seperate repositories, outside what is currently called parrot.git
+developed in separate repositories, outside what is currently called parrot.git
 or "Parrot Core"
 
 https://github.com/parrot/parrot
