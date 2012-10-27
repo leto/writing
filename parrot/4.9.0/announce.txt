@@ -1,4 +1,7 @@
+"All proofs inevitably lead to propositions which have no proof! All
+things are known because we want to believe in them."
 
+   -- The Lady Jessica, to Bene Gesserit delegation
 
 On behalf of the Parrot team, I'm proud to announce Parrot 4.9.0, also known
 as "Proto-Hydra".  Parrot (http://parrot.org/) is a virtual machine aimed
@@ -51,9 +54,8 @@ The SHA256 message digests for the downloadable tarballs are:
 dff04c24532ab539dbaf81ffe09d568da049fb817225a2cf53978343765381d5 parrot-4.9.0.tar.gz
 
 Many thanks to all our contributors for making this possible, and our sponsors
-for supporting this project. 
-This release consists of 134 new commits to the master
-branch (most activity has been on the threads branch) from the following authors:
+for supporting this project. This release consists of 134 new commits to the master
+branch (most recent activity has been on the threads branch) from the following authors:
 
 Reini Urban,  Jonathan "Duke" Leto, Andrew "Whiteknight" Whitworth, James E Keenan,
 Bob Kuo, Josh Juran, Alvis Yardley and Martin Vorländer.
