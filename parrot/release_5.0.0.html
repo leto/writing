@@ -1,0 +1,87 @@
+<pre>
+"No disassemble!"
+    -- Johnny Five
+</pre>
+
+<p>
+On behalf of the Parrot team, I'm proud to announce Parrot 5.0.0, also known
+as "Johnny Five Alive".  Parrot (http://parrot.org/) is a virtual machine aimed
+at running all dynamic languages.
+</p>
+
+<p>
+Parrot 5.0.0 consists of 175 new commits from six authors on the master branch
+since the 4.11.0 release. Notably, this is the first stable release of Parrot
+with thread support (via the Task PMC).
+</p>
+
+<!--break-->
+
+<p>
+Parrot 5.0.0 is available on Parrot's FTP site
+(ftp://ftp.parrot.org/pub/parrot/releases/supported/5.0.0/), or by following the
+download instructions at http://parrot.org/download.  For those who would like
+to develop on Parrot, or help develop Parrot itself, we recommend using Git to
+retrieve the source code to get the latest and best Parrot code.
+</p>
+
+<pre>
+Parrot 5.0.0 News:
+    - Core
+        + Remove duplicate library search path entries, move "." from the beginning to
+          the end. [GH #368]
+        + Install forgotten runtime include files:
+          cloneflags.pasm
+          packfile_annotation_keytype.pasm
+          packfile_segments.pasm
+        + Install include/parrot/pbcversion.h with the main package, not devel.
+        + Install headers for dynpmc files.
+        + Install libraries tgc.pbc, NCI/Utils.pbc, OpenGL/Math.pbc, PCT/Dumper.pbc,
+          postgres.pbc, ProfTest.pbc and ProfTest/*pbc, String/Utils.pbc, URI/Escape.pbc,
+          YAML/Dumper/Base.pbc, YAML/Dumper/Default.pbc
+        + New experimental PARROT_DYNEXT environment variable
+        + New experimental dynext_dirs config entry (same as PARROT_DYNEXT and -X)
+        + Add OS error messages to FileHandle.open() error messages [GH #911]
+    - Build
+        + Generate MANIFEST.generated, cleanup MANIFEST,
+          removed MANIFEST_configure.generated, add installation of forgotten files
+          [GH #890]
+        + perl Configure.pl now calls make clean if possible
+        + Generate datadir/MANIFEST* for all installed files [GH #899]
+        + Improved Configure.pl probes for --with-llvm
+        + Replace / slashes with \ on windows for all Makefiles automatically.
+          This improves cygwin interaction, like remote or cronjob smoking on windows.
+        + Reenabled and fixed debugging line directives in pmc2c, ops2c not yet [GH #641]
+    - Tools
+        + Improved nci_thunk_gen (v0.02): handle void sig, add declaration
+        + Fixed nci examples
+    - Documentation
+        + Re-added docs/ops, the generated ops summary and docs/packfile-c.pod
+        + Improved pdd10_embedding
+        + Document FileHandle.open() exceptions and error messages
+    - Tests
+        + Added t/library/lib_search_path.t
+</pre>
+
+<p>
+The SHA256 message digests for the downloadable tarballs are:
+</p>
+
+<pre>
+40c7176059e4462c722511a29450a4b80867a8459e273b602fbeaac2a22457f9 parrot-5.0.0.tar.bz2
+47faa48bbba9b644bcef4d712e0c66c06d61b23a047ad3a5db6f001590c273df parrot-5.0.0.tar.gz
+</pre>
+
+<p>
+Many thanks to all our contributors for making this possible, and our sponsors
+for supporting this project. We would especially like to thank Google for donating
+$5000 to Parrot Foundation for participating in Google Code-In.
+</p>
+
+<p>
+Our next scheduled release is 19 Feb 2013.
+</p>
+
+<p>
+Enjoy!
+</p>
