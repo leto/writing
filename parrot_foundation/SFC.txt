@@ -17,9 +17,9 @@ Parrot is the in the ext/ directory.
 
     ext/nqp-rx - Copyright Patrick R. Michaud, Artistic 2.0
 
-    ext/Parrot-Embed - Copyright 2006-2011 by Parrot Foundation and "chromatic"
+    ext/Parrot-Embed - Copyright 2006-2012 by Parrot Foundation and "chromatic"
 
-    ext/winxed - Copyright 2009-2011 by Julián Albo "NotFound",
+    ext/winxed - Copyright 2009-2013 by Julián Albo "NotFound",
                  dual-licensed under GPLv3+Artistic 1.0
 
 * Please give us your roadmap and plans for future development of the
