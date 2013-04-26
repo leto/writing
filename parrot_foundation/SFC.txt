@@ -136,5 +136,14 @@ Our biggest "user" is Rakudo Perl 6, which itself has many developers
 (which are our users) and dozens to hundreds of users (which are our
 users once removed.)
 
-Various other small projects exist. @letolabs/parrot-libgit2 provides bindings 
-to the libgit2 library and [PL/Parrot](https://github.com/leto/plparrot) embeds Parrot into PostgreSQL.
+Various other small projects exist. parrot-libgit2 (https://github.com/letolabs/parrot-libgit2) provides bindings 
+to the libgit2 library and PL/Parrot (https://github.com/leto/plparrot) embeds Parrot into PostgreSQL.
+
+As for metrics about our community size, the Github Pulse for parrot.git will tell you are current
+and recent activity:
+
+https://github.com/parrot/parrot/pulse
+
+
+
+
