@@ -25,10 +25,9 @@ Parrot is the in the ext/ directory.
 * Please give us your roadmap and plans for future development of the
 project, including both code and community plans.
 
-We currently do not have a roadmap, but our current focus is to merge
-a long-awaited "threads" branch which will give Parrot a flexible
-way to create OS threads, green threads and hybrids between OS and
-green threads.
+We currently do not have an official developer roadmap. We recently
+merged the very important "threads" branch but they are not yet being
+effectively used in Parrot core or HLLs.
 
 * Please give us the main link to the projects primary website.
 
